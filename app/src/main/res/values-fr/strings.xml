@@ -179,12 +179,12 @@
     <string name="visible">Visible</string>
     <string name="visible_when_active">Visible lorsqu\'il est actif</string>
     <string name="hidden">Caché</string>
-    <string name="check_for_updates">Check for updates</string>
-    <string name="checking_for_updates">Checking for updates</string>
-    <string name="new_version_available">New version available</string>
-    <string name="no_updates_available">No updates available</string>
+    <string name="check_for_updates">Vérifier les mises à jour</string>
+    <string name="checking_for_updates">Vérification des mises à jour en cours</string>
+    <string name="new_version_available">Nouvelle version disponible</string>
+    <string name="no_updates_available">Pas de mise à jour disponible</string>
     <string name="version">Version %s</string>
-    <string name="open_in_github">Open in GitHub</string>
+    <string name="open_in_github">Ouvrir dans GitHub</string>
     <string name="gestures">Gestes</string>
     <string name="player_gestures">Gestes du lecteur</string>
     <string name="miniplayer_gestures">Gestes du mini-lecteur</string>
