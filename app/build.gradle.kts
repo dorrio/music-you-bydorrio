@@ -5,6 +5,7 @@ plugins {
     alias(libs.plugins.kotlin.ksp)
 }
 
+// Bloque 'android' principal
 android {
     namespace = "it.vfsfitvfm.vimusic"
     compileSdk = 35
@@ -24,6 +25,7 @@ android {
         }
     }
 
+    // --- Configuración de TIPOS de COMPILACIÓN (Build Types) ---
     buildTypes {
         debug {
             applicationIdSuffix = ".debug"
@@ -36,24 +38,30 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
-            // *** ESTA ES LA LÍNEA MODIFICADA para Kotlin DSL ***
+            // IMPORTANTE: Aquí se asigna la configuración de firma 'release'
+            // Debe estar DENTRO del bloque 'release { ... }'
             signingConfig = signingConfigs.getByName("release")
         }
     }
 
-    // *** ESTE ES EL BLOQUE signingConfigs MODIFICADO para Kotlin DSL ***
+    // --- Configuración de FIRMA (Signing Configurations) ---
+    // ESTE BLOQUE 'signingConfigs' DEBE ESTAR DIRECTAMENTE DENTRO del bloque 'android { ... }'
+    // Al mismo nivel que 'defaultConfig' y 'buildTypes'
     signingConfigs {
+        // Aquí creamos una nueva configuración de firma llamada "release"
         create("release") {
-            // Asegúrate de que el nombre del archivo '.keystore' coincida
-            // con el que decodificas en tu workflow de GitHub Actions (release.keystore en tu caso)
-            storeFile = file(System.getenv("KEYSTORE_FILE_PATH") ?: "") // Usamos '?: ""' para evitar nulls en Kotlin
+            // La ruta al archivo del keystore (que GitHub Actions decodificará)
+            // Utilizamos '?: ""' para evitar posibles nulls en Kotlin si la variable no existe
+            storeFile = file(System.getenv("KEYSTORE_FILE_PATH") ?: "")
+            // Las contraseñas y el alias se obtienen de las variables de entorno
+            // que GitHub Actions inyectará desde tus secretos
             storePassword = System.getenv("KEYSTORE_PASSWORD")
             keyAlias = System.getenv("KEY_ALIAS")
             keyPassword = System.getenv("KEY_PASSWORD")
         }
     }
-    // *****************************************
 
+    // --- Otras configuraciones de Android ---
     sourceSets.all {
         kotlin.srcDir("src/$name/kotlin")
     }
