@@ -27,15 +27,15 @@ android {
         create("release") {
             val keystoreFile = project.findProperty("KEYSTORE_FILE") as String?
             val keystorePassword = project.findProperty("KEYSTORE_PASSWORD") as String?
-            val keyAlias = project.findProperty("KEY_ALIAS") as String?
-            val keyPassword = project.findProperty("KEY_PASSWORD") as String?
+            val keyAliasProperty = project.findProperty("KEY_ALIAS") as String?
+            val keyPasswordProperty = project.findProperty("KEY_PASSWORD") as String?
             
             if (!keystoreFile.isNullOrEmpty() && !keystorePassword.isNullOrEmpty() && 
-                !keyAlias.isNullOrEmpty() && !keyPassword.isNullOrEmpty()) {
+                !keyAliasProperty.isNullOrEmpty() && !keyPasswordProperty.isNullOrEmpty()) {
                 storeFile = file(keystoreFile)
                 storePassword = keystorePassword
-                this.keyAlias = keyAlias
-                this.keyPassword = keyPassword
+                keyAlias = keyAliasProperty
+                keyPassword = keyPasswordProperty
             } else {
                 // Configuración por defecto para desarrollo local
                 storeFile = file("debug.keystore")
