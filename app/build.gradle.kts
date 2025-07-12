@@ -36,21 +36,20 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
-            // *** AÑADE ESTA LÍNEA PARA REFERENCIAR LA CONFIGURACIÓN DE FIRMA ***
-            signingConfig signingConfigs.release
+            // *** ESTA ES LA LÍNEA MODIFICADA para Kotlin DSL ***
+            signingConfig = signingConfigs.getByName("release")
         }
     }
 
-    // *** AÑADE ESTE BLOQUE signingConfigs ***
+    // *** ESTE ES EL BLOQUE signingConfigs MODIFICADO para Kotlin DSL ***
     signingConfigs {
-        release {
-            // Estas variables de entorno serán inyectadas por GitHub Actions
+        create("release") {
             // Asegúrate de que el nombre del archivo '.keystore' coincida
             // con el que decodificas en tu workflow de GitHub Actions (release.keystore en tu caso)
-            storeFile file(System.getenv("KEYSTORE_FILE_PATH"))
-            storePassword System.getenv("KEYSTORE_PASSWORD")
-            keyAlias System.getenv("KEY_ALIAS")
-            keyPassword System.getenv("KEY_PASSWORD")
+            storeFile = file(System.getenv("KEYSTORE_FILE_PATH") ?: "") // Usamos '?: ""' para evitar nulls en Kotlin
+            storePassword = System.getenv("KEYSTORE_PASSWORD")
+            keyAlias = System.getenv("KEY_ALIAS")
+            keyPassword = System.getenv("KEY_PASSWORD")
         }
     }
     // *****************************************
