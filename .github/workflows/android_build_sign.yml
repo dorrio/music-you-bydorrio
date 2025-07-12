@@ -12,10 +12,10 @@
 
         steps:
         - name: Checkout code
-          uses: actions/checkout@v3
+          uses: actions/checkout@v4
 
         - name: Set up JDK 17
-          uses: actions/setup-java@v3
+          uses: actions/setup-java@v4
           with:
             java-version: '17'
             distribution: 'temurin'
@@ -37,9 +37,9 @@
           run: ./gradlew assembleRelease
 
         - name: Upload Release APK
-          uses: actions/upload-artifact@v3
+          uses: actions/upload-artifact@v4
           with:
             name: release-apk
             path: app/build/outputs/apk/release/app-release-unsigned.apk # ¡OJO! Lee la nota abajo
             # Si tu APK firmado tiene otro nombre o ruta, ajústalo aquí.
-            # Comúnmente es app/build/outputs/apk/release/app-release.apk
+            # Comúnmente es app/build/outputs/apk/release/app-release.aps/apk/debug/app-debug.apk
