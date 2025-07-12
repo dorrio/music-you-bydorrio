@@ -1,45 +1,44 @@
-    name: Android CI - Build and Sign APK
+name: Build and Release APK
 
-    on:
-      push:
-        branches: [ main ] # O la rama que uses para tus releases
-      # También puedes dispararlo manualmente
-      workflow_dispatch:
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
 
-    jobs:
-      build:
-        runs-on: ubuntu-latest
-
-        steps:
-        - name: Checkout code
-          uses: actions/checkout@v4
-
-        - name: Set up JDK 17
-          uses: actions/setup-java@v4
-          with:
-            java-version: '17'
-            distribution: 'temurin'
-            cache: gradle
-
-        - name: Grant execute permission for gradlew
-          run: chmod +x ./gradlew
-
-        - name: Decode Keystore
-          run: |
-            echo "${{ secrets.KEYSTORE_BASE64 }}" | base64 --decode > ${{ github.workspace }}/app/release.keystore
-          # Asegúrate de que la ruta 'app/release.keystore' coincida con la que configures en tu build.gradle
-
-        - name: Build and Sign Release APK
-          env:
-            SIGNING_KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
-            SIGNING_KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
-            SIGNING_STORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
-          run: ./gradlew assembleRelease
-
-        - name: Upload Release APK
-          uses: actions/upload-artifact@v4
-          with:
-            name: release-apk
-            path: app/build/outputs/apk/release/app-release-unsigned.apk # ¡OJO! Lee la nota abajo
-            # Si tu APK firmado tiene otro nombre o ruta, ajústalo aquí.
-            # Comúnmente es app/build/outputs/apk/release/app-release.aps/apk/debug/app-debug.apk
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Set up JDK 17
+      uses: actions/setup-java@v4
+      with:
+        java-version: '17'
+        distribution: 'temurin'
+    
+    - name: Setup Android SDK
+      uses: android-actions/setup-android@v3
+    
+    - name: Decode Keystore
+      run: |
+        echo ${{ secrets.KEYSTORE_BASE64 }} | base64 -d > app/keystore.jks
+    
+    - name: Make gradlew executable
+      run: chmod +x ./gradlew
+    
+    - name: Build Release APK
+      run: ./gradlew assembleRelease
+      env:
+        KEYSTORE_FILE: app/keystore.jks
+        KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
+        KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
+        KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
+    
+    - name: Upload APK
+      uses: actions/upload-artifact@v4
+      with:
+        name: app-release
+        path: app/build/outputs/apk/release/app-release.apk
