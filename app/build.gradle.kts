@@ -6,7 +6,7 @@ plugins {
 }
 
 android {
-    namespace = "it.vfsfitvnm.vimusic"
+    namespace = "it.vfsfitvfm.vimusic"
     compileSdk = 35
 
     defaultConfig {
@@ -36,8 +36,24 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+            // *** AÑADE ESTA LÍNEA PARA REFERENCIAR LA CONFIGURACIÓN DE FIRMA ***
+            signingConfig signingConfigs.release
         }
     }
+
+    // *** AÑADE ESTE BLOQUE signingConfigs ***
+    signingConfigs {
+        release {
+            // Estas variables de entorno serán inyectadas por GitHub Actions
+            // Asegúrate de que el nombre del archivo '.keystore' coincida
+            // con el que decodificas en tu workflow de GitHub Actions (release.keystore en tu caso)
+            storeFile file(System.getenv("KEYSTORE_FILE_PATH"))
+            storePassword System.getenv("KEYSTORE_PASSWORD")
+            keyAlias System.getenv("KEY_ALIAS")
+            keyPassword System.getenv("KEY_PASSWORD")
+        }
+    }
+    // *****************************************
 
     sourceSets.all {
         kotlin.srcDir("src/$name/kotlin")
