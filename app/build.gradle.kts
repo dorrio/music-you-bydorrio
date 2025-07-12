@@ -1,112 +1,151 @@
 plugins {
-    alias(libs.plugins.android.application)
-    alias(libs.plugins.compose.compiler)
-    alias(libs.plugins.kotlin)
-    alias(libs.plugins.kotlin.ksp)
+    id("com.android.application")
+    id("org.jetbrains.kotlin.android")
+    // Agrega otros plugins que necesites, por ejemplo:
+    // id("kotlin-kapt")
+    // id("dagger.hilt.android.plugin")
 }
 
-// Bloque 'android' principal
 android {
-    namespace = "it.vfsfitvfm.vimusic"
-    compileSdk = 35
+    namespace = "com.tudominio.tuapp" // Cambia por tu package name
+    compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.github.musicyou"
-        minSdk = 21
-        targetSdk = 35
-        versionCode = 12
-        versionName = "0.12"
-    }
+        applicationId = "com.tudominio.tuapp" // Cambia por tu application ID
+        minSdk = 24
+        targetSdk = 34
+        versionCode = 1
+        versionName = "1.0"
 
-    splits {
-        abi {
-            reset()
-            isUniversalApk = true
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables {
+            useSupportLibrary = true
         }
     }
 
-    // --- Configuración de TIPOS de COMPILACIÓN (Build Types) ---
+    signingConfigs {
+        create("release") {
+            val keystoreFile = project.findProperty("KEYSTORE_FILE") as String?
+            val keystorePassword = project.findProperty("KEYSTORE_PASSWORD") as String?
+            val keyAlias = project.findProperty("KEY_ALIAS") as String?
+            val keyPassword = project.findProperty("KEY_PASSWORD") as String?
+            
+            if (!keystoreFile.isNullOrEmpty() && !keystorePassword.isNullOrEmpty() && 
+                !keyAlias.isNullOrEmpty() && !keyPassword.isNullOrEmpty()) {
+                storeFile = file(keystoreFile)
+                storePassword = keystorePassword
+                this.keyAlias = keyAlias
+                this.keyPassword = keyPassword
+            } else {
+                // Configuración por defecto para desarrollo local
+                storeFile = file("debug.keystore")
+                storePassword = "android"
+                keyAlias = "androiddebugkey"
+                keyPassword = "android"
+            }
+        }
+    }
+
     buildTypes {
         debug {
+            isDebuggable = true
             applicationIdSuffix = ".debug"
+            versionNameSuffix = "-debug"
         }
-
+        
         release {
             isMinifyEnabled = true
             isShrinkResources = true
+            signingConfig = signingConfigs.getByName("release")
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
-            // IMPORTANTE: Aquí se asigna la configuración de firma 'release'
-            // Debe estar DENTRO del bloque 'release { ... }'
-            signingConfig = signingConfigs.getByName("release")
         }
     }
 
-    // --- Configuración de FIRMA (Signing Configurations) ---
-    // ESTE BLOQUE 'signingConfigs' DEBE ESTAR DIRECTAMENTE DENTRO del bloque 'android { ... }'
-    // Al mismo nivel que 'defaultConfig' y 'buildTypes'
-    signingConfigs {
-        // Aquí creamos una nueva configuración de firma llamada "release"
-        create("release") {
-            // La ruta al archivo del keystore (que GitHub Actions decodificará)
-            // Utilizamos '?: ""' para evitar posibles nulls en Kotlin si la variable no existe
-            storeFile = file(System.getenv("KEYSTORE_FILE_PATH") ?: "")
-            // Las contraseñas y el alias se obtienen de las variables de entorno
-            // que GitHub Actions inyectará desde tus secretos
-            storePassword = System.getenv("KEYSTORE_PASSWORD")
-            keyAlias = System.getenv("KEY_ALIAS")
-            keyPassword = System.getenv("KEY_PASSWORD")
-        }
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
     }
 
-    // --- Otras configuraciones de Android ---
-    sourceSets.all {
-        kotlin.srcDir("src/$name/kotlin")
+    kotlinOptions {
+        jvmTarget = "1.8"
     }
 
     buildFeatures {
         compose = true
+        viewBinding = true // Si usas View Binding
+        dataBinding = true // Si usas Data Binding
     }
 
-    compileOptions {
-        isCoreLibraryDesugaringEnabled = true
-        sourceCompatibility = JavaVersion.VERSION_17
-        targetCompatibility = JavaVersion.VERSION_17
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.5.8"
     }
 
-    kotlinOptions {
-        freeCompilerArgs += "-Xcontext-receivers"
-        jvmTarget = "17"
+    packaging {
+        resources {
+            excludes += "/META-INF/{AL2.0,LGPL2.1}"
+        }
     }
-}
-
-ksp {
-    arg("room.schemaLocation", "$projectDir/schemas")
 }
 
 dependencies {
-    implementation(platform(libs.compose.bom))
-    implementation(libs.compose.activity)
-    implementation(libs.coil.compose)
-    implementation(libs.coil.network)
-    implementation(libs.compose.material.icons)
-    implementation(libs.compose.material3)
-    implementation(libs.compose.navigation)
-    implementation(libs.compose.shimmer)
-    implementation(libs.compose.ui)
-    implementation(libs.compose.ui.util)
-    implementation(libs.core.splashscreen)
-    implementation(libs.lifecycle.viewmodel.compose)
-    implementation(libs.material.motion.compose)
-    implementation(libs.media)
-    implementation(libs.media3.exoplayer)
-    implementation(libs.reorderable)
-    implementation(libs.room)
-    ksp(libs.room.compiler)
-    implementation(projects.github)
-    implementation(projects.innertube)
-    implementation(projects.kugou)
-    coreLibraryDesugaring(libs.desugaring)
+    // Core Android
+    implementation("androidx.core:core-ktx:1.12.0")
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.7.0")
+    implementation("androidx.activity:activity-compose:1.8.2")
+    
+    // Compose BOM
+    implementation(platform("androidx.compose:compose-bom:2024.02.00"))
+    implementation("androidx.compose.ui:ui")
+    implementation("androidx.compose.ui:ui-graphics")
+    implementation("androidx.compose.ui:ui-tooling-preview")
+    implementation("androidx.compose.material3:material3")
+    
+    // Navigation
+    implementation("androidx.navigation:navigation-compose:2.7.6")
+    
+    // ViewModel
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.7.0")
+    
+    // Coroutines
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
+    
+    // Networking (si usas Retrofit)
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+    implementation("com.squareup.okhttp3:logging-interceptor:4.12.0")
+    
+    // Image loading (si usas Coil)
+    implementation("io.coil-kt:coil-compose:2.5.0")
+    
+    // Dependency Injection (si usas Hilt)
+    // implementation("com.google.dagger:hilt-android:2.48")
+    // kapt("com.google.dagger:hilt-compiler:2.48")
+    // implementation("androidx.hilt:hilt-navigation-compose:1.1.0")
+    
+    // Room Database (si usas Room)
+    // implementation("androidx.room:room-runtime:2.6.1")
+    // implementation("androidx.room:room-ktx:2.6.1")
+    // kapt("androidx.room:room-compiler:2.6.1")
+    
+    // Media playback (para tu app de música)
+    implementation("androidx.media3:media3-exoplayer:1.2.1")
+    implementation("androidx.media3:media3-ui:1.2.1")
+    implementation("androidx.media3:media3-session:1.2.1")
+    
+    // Permissions
+    implementation("com.google.accompanist:accompanist-permissions:0.32.0")
+    
+    // Testing
+    testImplementation("junit:junit:4.13.2")
+    androidTestImplementation("androidx.test.ext:junit:1.1.5")
+    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+    androidTestImplementation(platform("androidx.compose:compose-bom:2024.02.00"))
+    androidTestImplementation("androidx.compose.ui:ui-test-junit4")
+    
+    // Debug
+    debugImplementation("androidx.compose.ui:ui-tooling")
+    debugImplementation("androidx.compose.ui:ui-test-manifest")
 }
