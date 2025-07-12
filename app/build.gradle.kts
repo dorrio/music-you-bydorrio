@@ -1,6 +1,7 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("org.jetbrains.kotlin.plugin.compose") version "1.9.22"
     // Agrega otros plugins que necesites, por ejemplo:
     // id("kotlin-kapt")
     // id("dagger.hilt.android.plugin")
@@ -77,10 +78,6 @@ android {
         compose = true
         viewBinding = true // Si usas View Binding
         dataBinding = true // Si usas Data Binding
-    }
-
-    composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.8"
     }
 
     packaging {
