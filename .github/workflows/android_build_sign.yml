@@ -1,66 +1,49 @@
-name: Build and Release APK
+name: Android CI - Build and Sign Release APK
 
 on:
   push:
-    branches: [ main, master ]
-  pull_request:
-    branches: [ main, master ]
+    branches: [ main ]
+  workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    
+
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
-    
+
     - name: Set up JDK 17
       uses: actions/setup-java@v4
       with:
         java-version: '17'
         distribution: 'temurin'
-    
-    - name: Setup Android SDK
-      uses: android-actions/setup-android@v3
-    
+        cache: gradle
+
     - name: Grant execute permission for gradlew
-      run: chmod +x gradlew
-    
+      run: chmod +x ./gradlew
+
     - name: Decode Keystore
+      id: decode_keystore
       run: |
-        if [ -n "$KEYSTORE_BASE64" ]; then
-          echo "Decoding keystore..."
-          echo "$KEYSTORE_BASE64" | base64 -d > app/release.keystore
-          ls -la app/release.keystore
-        else
-          echo "No keystore provided, will build unsigned APK"
-        fi
+        mkdir -p ${{ github.workspace }}/keystores
+        KEYSTORE_PATH="${{ github.workspace }}/keystores/release.jks"
+        echo "Decoding keystore to $KEYSTORE_PATH"
+        echo "${{ secrets.KEYSTORE_BASE64 }}" | base64 --decode > $KEYSTORE_PATH
+        echo "keystore_path=$KEYSTORE_PATH" >> $GITHUB_OUTPUT
+
+    - name: Build and Sign Release APK
       env:
-        KEYSTORE_BASE64: ${{ secrets.KEYSTORE_BASE64 }}
-    
-    - name: Build Debug APK
-      run: ./gradlew assembleDebug
-    
-    - name: Build Release APK
-      run: ./gradlew assembleRelease
-      env:
-        KEYSTORE_FILE: app/release.keystore
-        KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
-        KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
-        KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
-    
-    - name: Upload Debug APK
-      uses: actions/upload-artifact@v4
-      with:
-        name: app-debug
-        path: app/build/outputs/apk/debug/app-debug.apk
-    
+        # Pasa los secretos y la ruta del keystore como variables de entorno
+        KEYSTORE_FILE_PATH: ${{ steps.decode_keystore.outputs.keystore_path }} # Ruta del keystore decodificado
+        KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }} # Directamente del secreto
+        KEY_ALIAS: ${{ secrets.KEY_ALIAS }}                 # Directamente del secreto
+        KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}           # Directamente del secreto
+      run: ./gradlew assembleRelease # O bundleRelease
+
     - name: Upload Release APK
       uses: actions/upload-artifact@v4
       with:
-        name: app-release
+        name: release-apk
         path: app/build/outputs/apk/release/app-release.apk
-    
-    - name: Clean up keystore
-      if: always()
-      run: rm -f app/release.keystore
+        # Si es AAB: app/build/outputs/bundle/release/app-release.aab
