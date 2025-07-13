@@ -1,4 +1,4 @@
-package it.vfsfitvnm.vimusic.ui.screens.home
+package es.remix.vimusic.ui.screens.home
 
 import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.foundation.ExperimentalFoundationApi
@@ -18,9 +18,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.res.stringResource
 import androidx.navigation.NavController
-import it.vfsfitvnm.vimusic.R
-import it.vfsfitvnm.vimusic.models.Screen
-import it.vfsfitvnm.vimusic.ui.components.TooltipIconButton
+import es.remix.vimusic.R
+import es.remix.vimusic.models.Screen
+import es.remix.vimusic.ui.components.TooltipIconButton
 
 @OptIn(
     ExperimentalFoundationApi::class,

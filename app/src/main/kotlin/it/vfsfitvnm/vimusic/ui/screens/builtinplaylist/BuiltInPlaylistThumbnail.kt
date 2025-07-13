@@ -1,4 +1,4 @@
-package it.vfsfitvnm.vimusic.ui.screens.builtinplaylist
+package es.remix.vimusic.ui.screens.builtinplaylist
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -15,7 +15,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.unit.dp
-import it.vfsfitvnm.vimusic.enums.BuiltInPlaylist
+import es.remix.vimusic.enums.BuiltInPlaylist
 
 @Composable
 fun BuiltInPlaylistThumbnail(builtInPlaylist: BuiltInPlaylist) {

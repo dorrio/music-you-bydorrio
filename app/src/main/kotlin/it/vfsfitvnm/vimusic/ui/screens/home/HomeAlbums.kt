@@ -1,4 +1,4 @@
-package it.vfsfitvnm.vimusic.ui.screens.home
+package es.remix.vimusic.ui.screens.home
 
 import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.foundation.ExperimentalFoundationApi
@@ -16,17 +16,17 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
-import it.vfsfitvnm.vimusic.LocalPlayerPadding
-import it.vfsfitvnm.vimusic.R
-import it.vfsfitvnm.vimusic.enums.AlbumSortBy
-import it.vfsfitvnm.vimusic.enums.SortOrder
-import it.vfsfitvnm.vimusic.models.Album
-import it.vfsfitvnm.vimusic.ui.components.SortingHeader
-import it.vfsfitvnm.vimusic.ui.items.LocalAlbumItem
-import it.vfsfitvnm.vimusic.utils.albumSortByKey
-import it.vfsfitvnm.vimusic.utils.albumSortOrderKey
-import it.vfsfitvnm.vimusic.utils.rememberPreference
-import it.vfsfitvnm.vimusic.viewmodels.HomeAlbumsViewModel
+import es.remix.vimusic.LocalPlayerPadding
+import es.remix.vimusic.R
+import es.remix.vimusic.enums.AlbumSortBy
+import es.remix.vimusic.enums.SortOrder
+import es.remix.vimusic.models.Album
+import es.remix.vimusic.ui.components.SortingHeader
+import es.remix.vimusic.ui.items.LocalAlbumItem
+import es.remix.vimusic.utils.albumSortByKey
+import es.remix.vimusic.utils.albumSortOrderKey
+import es.remix.vimusic.utils.rememberPreference
+import es.remix.vimusic.viewmodels.HomeAlbumsViewModel
 
 @ExperimentalFoundationApi
 @ExperimentalAnimationApi

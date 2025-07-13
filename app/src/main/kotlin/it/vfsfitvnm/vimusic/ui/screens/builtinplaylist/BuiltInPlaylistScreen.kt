@@ -1,4 +1,4 @@
-package it.vfsfitvnm.vimusic.ui.screens.builtinplaylist
+package es.remix.vimusic.ui.screens.builtinplaylist
 
 import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.foundation.ExperimentalFoundationApi
@@ -19,8 +19,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
-import it.vfsfitvnm.vimusic.R
-import it.vfsfitvnm.vimusic.enums.BuiltInPlaylist
+import es.remix.vimusic.R
+import es.remix.vimusic.enums.BuiltInPlaylist
 
 @OptIn(ExperimentalMaterial3Api::class)
 @ExperimentalFoundationApi

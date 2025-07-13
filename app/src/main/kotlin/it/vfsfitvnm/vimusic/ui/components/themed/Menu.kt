@@ -1,4 +1,4 @@
-package it.vfsfitvnm.vimusic.ui.components.themed
+package es.remix.vimusic.ui.components.themed
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
@@ -16,7 +16,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.graphics.vector.ImageVector
-import it.vfsfitvnm.vimusic.ui.styling.Dimensions
+import es.remix.vimusic.ui.styling.Dimensions
 
 @Composable
 inline fun Menu(

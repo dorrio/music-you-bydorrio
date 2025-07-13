@@ -1,4 +1,4 @@
-package it.vfsfitvnm.vimusic.ui.screens.settings
+package es.remix.vimusic.ui.screens.settings
 
 import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.foundation.clickable
@@ -43,9 +43,9 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import com.github.api.GitHub
-import it.vfsfitvnm.vimusic.LocalPlayerPadding
-import it.vfsfitvnm.vimusic.R
-import it.vfsfitvnm.vimusic.ui.styling.Dimensions
+import es.remix.vimusic.LocalPlayerPadding
+import es.remix.vimusic.R
+import es.remix.vimusic.ui.styling.Dimensions
 
 @ExperimentalAnimationApi
 @Composable

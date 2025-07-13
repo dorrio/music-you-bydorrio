@@ -1,4 +1,4 @@
-package it.vfsfitvnm.vimusic.ui.screens.player
+package es.remix.vimusic.ui.screens.player
 
 import androidx.compose.animation.animateColorAsState
 import androidx.compose.foundation.background
@@ -45,17 +45,17 @@ import androidx.compose.ui.unit.dp
 import androidx.media3.common.MediaItem
 import androidx.media3.common.Player
 import coil3.compose.AsyncImage
-import it.vfsfitvnm.vimusic.LocalPlayerServiceBinder
-import it.vfsfitvnm.vimusic.ui.styling.Dimensions
-import it.vfsfitvnm.vimusic.ui.styling.px
-import it.vfsfitvnm.vimusic.utils.DisposableListener
-import it.vfsfitvnm.vimusic.utils.forceSeekToNext
-import it.vfsfitvnm.vimusic.utils.forceSeekToPrevious
-import it.vfsfitvnm.vimusic.utils.miniplayerGesturesEnabledKey
-import it.vfsfitvnm.vimusic.utils.positionAndDurationState
-import it.vfsfitvnm.vimusic.utils.rememberPreference
-import it.vfsfitvnm.vimusic.utils.shouldBePlaying
-import it.vfsfitvnm.vimusic.utils.thumbnail
+import es.remix.vimusic.LocalPlayerServiceBinder
+import es.remix.vimusic.ui.styling.Dimensions
+import es.remix.vimusic.ui.styling.px
+import es.remix.vimusic.utils.DisposableListener
+import es.remix.vimusic.utils.forceSeekToNext
+import es.remix.vimusic.utils.forceSeekToPrevious
+import es.remix.vimusic.utils.miniplayerGesturesEnabledKey
+import es.remix.vimusic.utils.positionAndDurationState
+import es.remix.vimusic.utils.rememberPreference
+import es.remix.vimusic.utils.shouldBePlaying
+import es.remix.vimusic.utils.thumbnail
 import kotlin.math.absoluteValue
 
 @OptIn(ExperimentalMaterial3Api::class)

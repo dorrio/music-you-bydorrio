@@ -1,4 +1,4 @@
-package it.vfsfitvnm.vimusic.ui.components
+package es.remix.vimusic.ui.components
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.widthIn
@@ -12,7 +12,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
-import it.vfsfitvnm.vimusic.models.ActionInfo
+import es.remix.vimusic.models.ActionInfo
 
 @Composable
 fun CoverScaffold(

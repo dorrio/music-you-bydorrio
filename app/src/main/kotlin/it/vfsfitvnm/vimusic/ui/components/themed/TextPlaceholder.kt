@@ -1,4 +1,4 @@
-package it.vfsfitvnm.vimusic.ui.components.themed
+package es.remix.vimusic.ui.components.themed
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Spacer
@@ -12,7 +12,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
-import it.vfsfitvnm.vimusic.ui.styling.shimmer
+import es.remix.vimusic.ui.styling.shimmer
 import kotlin.random.Random
 
 @Composable

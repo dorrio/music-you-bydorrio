@@ -1,4 +1,4 @@
-package it.vfsfitvnm.vimusic.ui.components
+package es.remix.vimusic.ui.components
 
 import androidx.annotation.StringRes
 import androidx.compose.material3.ExperimentalMaterial3Api

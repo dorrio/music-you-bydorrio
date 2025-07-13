@@ -1,4 +1,4 @@
-package it.vfsfitvnm.vimusic.utils
+package es.remix.vimusic.utils
 
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf

@@ -1,4 +1,4 @@
-package it.vfsfitvnm.vimusic.ui.components
+package es.remix.vimusic.ui.components
 
 import androidx.compose.foundation.layout.heightIn
 import androidx.compose.material3.Icon
@@ -16,11 +16,11 @@ import androidx.navigation.NavDestination.Companion.hierarchy
 import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.currentBackStackEntryAsState
-import it.vfsfitvnm.vimusic.enums.NavigationLabelsVisibility
-import it.vfsfitvnm.vimusic.models.Screen
-import it.vfsfitvnm.vimusic.utils.homeScreenTabIndexKey
-import it.vfsfitvnm.vimusic.utils.navigationLabelsVisibilityKey
-import it.vfsfitvnm.vimusic.utils.rememberPreference
+import es.remix.vimusic.enums.NavigationLabelsVisibility
+import es.remix.vimusic.models.Screen
+import es.remix.vimusic.utils.homeScreenTabIndexKey
+import es.remix.vimusic.utils.navigationLabelsVisibilityKey
+import es.remix.vimusic.utils.rememberPreference
 
 @Composable
 fun BottomNavigation(navController: NavHostController) {

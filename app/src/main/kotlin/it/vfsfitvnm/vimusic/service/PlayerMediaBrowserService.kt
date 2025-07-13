@@ -1,4 +1,4 @@
-package it.vfsfitvnm.vimusic.service
+package es.remix.vimusic.service
 
 import android.content.ComponentName
 import android.content.ContentResolver
@@ -16,17 +16,17 @@ import androidx.core.os.bundleOf
 import androidx.media3.common.Player
 import androidx.media3.common.util.UnstableApi
 import androidx.media3.datasource.cache.Cache
-import it.vfsfitvnm.vimusic.Database
-import it.vfsfitvnm.vimusic.R
-import it.vfsfitvnm.vimusic.models.Album
-import it.vfsfitvnm.vimusic.models.PlaylistPreview
-import it.vfsfitvnm.vimusic.models.Song
-import it.vfsfitvnm.vimusic.models.SongWithContentLength
-import it.vfsfitvnm.vimusic.utils.asMediaItem
-import it.vfsfitvnm.vimusic.utils.forcePlayAtIndex
-import it.vfsfitvnm.vimusic.utils.forceSeekToNext
-import it.vfsfitvnm.vimusic.utils.forceSeekToPrevious
-import it.vfsfitvnm.vimusic.utils.intent
+import es.remix.vimusic.Database
+import es.remix.vimusic.R
+import es.remix.vimusic.models.Album
+import es.remix.vimusic.models.PlaylistPreview
+import es.remix.vimusic.models.Song
+import es.remix.vimusic.models.SongWithContentLength
+import es.remix.vimusic.utils.asMediaItem
+import es.remix.vimusic.utils.forcePlayAtIndex
+import es.remix.vimusic.utils.forceSeekToNext
+import es.remix.vimusic.utils.forceSeekToPrevious
+import es.remix.vimusic.utils.intent
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.first

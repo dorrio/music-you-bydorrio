@@ -1,4 +1,4 @@
-package it.vfsfitvnm.vimusic.ui.screens.search
+package es.remix.vimusic.ui.screens.search
 
 import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.foundation.layout.Arrangement
@@ -30,11 +30,11 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import it.vfsfitvnm.innertube.Innertube
 import it.vfsfitvnm.innertube.utils.plus
-import it.vfsfitvnm.vimusic.LocalPlayerPadding
-import it.vfsfitvnm.vimusic.R
-import it.vfsfitvnm.vimusic.ui.components.ShimmerHost
-import it.vfsfitvnm.vimusic.ui.styling.Dimensions
-import it.vfsfitvnm.vimusic.viewmodels.ItemsPageViewModel
+import es.remix.vimusic.LocalPlayerPadding
+import es.remix.vimusic.R
+import es.remix.vimusic.ui.components.ShimmerHost
+import es.remix.vimusic.ui.styling.Dimensions
+import es.remix.vimusic.viewmodels.ItemsPageViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 

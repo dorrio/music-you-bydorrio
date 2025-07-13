@@ -1,4 +1,4 @@
-package it.vfsfitvnm.vimusic.ui.screens.settings
+package es.remix.vimusic.ui.screens.settings
 
 import android.text.format.Formatter
 import androidx.compose.animation.ExperimentalAnimationApi
@@ -25,15 +25,15 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import coil3.annotation.ExperimentalCoilApi
 import coil3.imageLoader
-import it.vfsfitvnm.vimusic.LocalPlayerPadding
-import it.vfsfitvnm.vimusic.LocalPlayerServiceBinder
-import it.vfsfitvnm.vimusic.R
-import it.vfsfitvnm.vimusic.enums.CoilDiskCacheMaxSize
-import it.vfsfitvnm.vimusic.enums.ExoPlayerDiskCacheMaxSize
-import it.vfsfitvnm.vimusic.ui.styling.Dimensions
-import it.vfsfitvnm.vimusic.utils.coilDiskCacheMaxSizeKey
-import it.vfsfitvnm.vimusic.utils.exoPlayerDiskCacheMaxSizeKey
-import it.vfsfitvnm.vimusic.utils.rememberPreference
+import es.remix.vimusic.LocalPlayerPadding
+import es.remix.vimusic.LocalPlayerServiceBinder
+import es.remix.vimusic.R
+import es.remix.vimusic.enums.CoilDiskCacheMaxSize
+import es.remix.vimusic.enums.ExoPlayerDiskCacheMaxSize
+import es.remix.vimusic.ui.styling.Dimensions
+import es.remix.vimusic.utils.coilDiskCacheMaxSizeKey
+import es.remix.vimusic.utils.exoPlayerDiskCacheMaxSizeKey
+import es.remix.vimusic.utils.rememberPreference
 
 @androidx.annotation.OptIn(androidx.media3.common.util.UnstableApi::class)
 @OptIn(ExperimentalCoilApi::class)

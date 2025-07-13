@@ -1,4 +1,4 @@
-package it.vfsfitvnm.vimusic.models
+package es.remix.vimusic.models
 
 data class Info(
     val id: String,

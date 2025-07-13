@@ -1,4 +1,4 @@
-package it.vfsfitvnm.vimusic.models
+package es.remix.vimusic.models
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.Stable

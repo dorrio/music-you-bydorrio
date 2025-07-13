@@ -1,4 +1,4 @@
-package it.vfsfitvnm.vimusic.ui.screens.search
+package es.remix.vimusic.ui.screens.search
 
 import android.os.Build
 import androidx.compose.animation.ExperimentalAnimationApi
@@ -49,14 +49,14 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import it.vfsfitvnm.innertube.Innertube
 import it.vfsfitvnm.innertube.requests.searchSuggestions
-import it.vfsfitvnm.vimusic.Database
-import it.vfsfitvnm.vimusic.LocalPlayerPadding
-import it.vfsfitvnm.vimusic.R
-import it.vfsfitvnm.vimusic.models.SearchQuery
-import it.vfsfitvnm.vimusic.query
-import it.vfsfitvnm.vimusic.ui.styling.Dimensions
-import it.vfsfitvnm.vimusic.utils.pauseSearchHistoryKey
-import it.vfsfitvnm.vimusic.utils.preferences
+import es.remix.vimusic.Database
+import es.remix.vimusic.LocalPlayerPadding
+import es.remix.vimusic.R
+import es.remix.vimusic.models.SearchQuery
+import es.remix.vimusic.query
+import es.remix.vimusic.ui.styling.Dimensions
+import es.remix.vimusic.utils.pauseSearchHistoryKey
+import es.remix.vimusic.utils.preferences
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.distinctUntilChanged
 

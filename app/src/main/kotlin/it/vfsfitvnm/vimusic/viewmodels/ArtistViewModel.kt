@@ -1,4 +1,4 @@
-package it.vfsfitvnm.vimusic.viewmodels
+package es.remix.vimusic.viewmodels
 
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -7,8 +7,8 @@ import androidx.compose.runtime.snapshotFlow
 import androidx.lifecycle.ViewModel
 import it.vfsfitvnm.innertube.Innertube
 import it.vfsfitvnm.innertube.requests.artistPage
-import it.vfsfitvnm.vimusic.Database
-import it.vfsfitvnm.vimusic.models.Artist
+import es.remix.vimusic.Database
+import es.remix.vimusic.models.Artist
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.distinctUntilChanged

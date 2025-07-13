@@ -1,4 +1,4 @@
-package it.vfsfitvnm.vimusic.service
+package es.remix.vimusic.service
 
 import android.content.Context
 import android.content.res.Configuration
@@ -11,7 +11,7 @@ import coil3.request.Disposable
 import coil3.request.ImageRequest
 import coil3.request.allowHardware
 import coil3.toBitmap
-import it.vfsfitvnm.vimusic.utils.thumbnail
+import es.remix.vimusic.utils.thumbnail
 
 context(Context)
 class BitmapProvider(

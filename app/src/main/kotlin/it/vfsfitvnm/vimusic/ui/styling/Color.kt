@@ -1,4 +1,4 @@
-package it.vfsfitvnm.vimusic.ui.styling
+package es.remix.vimusic.ui.styling
 
 import androidx.compose.material3.ColorScheme
 import androidx.compose.ui.graphics.Color

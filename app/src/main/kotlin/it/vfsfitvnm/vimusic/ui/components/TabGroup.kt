@@ -1,4 +1,4 @@
-package it.vfsfitvnm.vimusic.ui.components
+package es.remix.vimusic.ui.components
 
 import androidx.compose.foundation.pager.PagerState
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -10,7 +10,7 @@ import androidx.compose.material3.PrimaryTabRow
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.rememberCoroutineScope
-import it.vfsfitvnm.vimusic.models.Section
+import es.remix.vimusic.models.Section
 import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalMaterial3Api::class)

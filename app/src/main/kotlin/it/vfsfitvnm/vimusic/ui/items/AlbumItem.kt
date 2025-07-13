@@ -1,4 +1,4 @@
-package it.vfsfitvnm.vimusic.ui.items
+package es.remix.vimusic.ui.items
 
 import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -9,9 +9,9 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
 import coil3.compose.AsyncImage
 import it.vfsfitvnm.innertube.Innertube
-import it.vfsfitvnm.vimusic.models.Album
-import it.vfsfitvnm.vimusic.ui.styling.px
-import it.vfsfitvnm.vimusic.utils.thumbnail
+import es.remix.vimusic.models.Album
+import es.remix.vimusic.ui.styling.px
+import es.remix.vimusic.utils.thumbnail
 
 @Composable
 fun AlbumItem(

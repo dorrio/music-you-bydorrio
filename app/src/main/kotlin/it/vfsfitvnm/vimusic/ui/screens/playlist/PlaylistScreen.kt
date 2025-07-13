@@ -1,4 +1,4 @@
-package it.vfsfitvnm.vimusic.ui.screens.playlist
+package es.remix.vimusic.ui.screens.playlist
 
 import android.content.Intent
 import androidx.compose.animation.ExperimentalAnimationApi
@@ -31,16 +31,16 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
 import it.vfsfitvnm.innertube.Innertube
 import it.vfsfitvnm.innertube.requests.playlistPage
-import it.vfsfitvnm.vimusic.Database
-import it.vfsfitvnm.vimusic.R
-import it.vfsfitvnm.vimusic.models.Playlist
-import it.vfsfitvnm.vimusic.models.SongPlaylistMap
-import it.vfsfitvnm.vimusic.query
-import it.vfsfitvnm.vimusic.transaction
-import it.vfsfitvnm.vimusic.ui.components.TooltipIconButton
-import it.vfsfitvnm.vimusic.ui.components.themed.TextFieldDialog
-import it.vfsfitvnm.vimusic.utils.asMediaItem
-import it.vfsfitvnm.vimusic.utils.completed
+import es.remix.vimusic.Database
+import es.remix.vimusic.R
+import es.remix.vimusic.models.Playlist
+import es.remix.vimusic.models.SongPlaylistMap
+import es.remix.vimusic.query
+import es.remix.vimusic.transaction
+import es.remix.vimusic.ui.components.TooltipIconButton
+import es.remix.vimusic.ui.components.themed.TextFieldDialog
+import es.remix.vimusic.utils.asMediaItem
+import es.remix.vimusic.utils.completed
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 

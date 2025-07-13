@@ -1,4 +1,4 @@
-package it.vfsfitvnm.vimusic.ui.components
+package es.remix.vimusic.ui.components
 
 import androidx.annotation.PluralsRes
 import androidx.compose.animation.core.animateFloatAsState
@@ -27,8 +27,8 @@ import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
-import it.vfsfitvnm.vimusic.enums.SortOrder
-import it.vfsfitvnm.vimusic.models.SortBy
+import es.remix.vimusic.enums.SortOrder
+import es.remix.vimusic.models.SortBy
 
 @Composable
 fun <T : SortBy> SortingHeader(

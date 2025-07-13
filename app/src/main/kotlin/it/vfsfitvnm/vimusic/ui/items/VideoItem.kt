@@ -1,4 +1,4 @@
-package it.vfsfitvnm.vimusic.ui.items
+package es.remix.vimusic.ui.items
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -15,8 +15,8 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import coil3.compose.AsyncImage
 import it.vfsfitvnm.innertube.Innertube
-import it.vfsfitvnm.vimusic.ui.styling.onOverlay
-import it.vfsfitvnm.vimusic.ui.styling.overlay
+import es.remix.vimusic.ui.styling.onOverlay
+import es.remix.vimusic.ui.styling.overlay
 
 @Composable
 fun VideoItem(

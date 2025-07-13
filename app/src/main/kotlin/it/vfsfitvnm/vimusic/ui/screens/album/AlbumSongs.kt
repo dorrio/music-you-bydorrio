@@ -1,4 +1,4 @@
-package it.vfsfitvnm.vimusic.ui.screens.album
+package es.remix.vimusic.ui.screens.album
 
 import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.foundation.ExperimentalFoundationApi
@@ -26,23 +26,23 @@ import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
-import it.vfsfitvnm.vimusic.Database
-import it.vfsfitvnm.vimusic.LocalPlayerPadding
-import it.vfsfitvnm.vimusic.LocalPlayerServiceBinder
-import it.vfsfitvnm.vimusic.R
-import it.vfsfitvnm.vimusic.models.ActionInfo
-import it.vfsfitvnm.vimusic.models.LocalMenuState
-import it.vfsfitvnm.vimusic.models.Song
-import it.vfsfitvnm.vimusic.ui.components.CoverScaffold
-import it.vfsfitvnm.vimusic.ui.components.ShimmerHost
-import it.vfsfitvnm.vimusic.ui.components.themed.NonQueuedMediaItemMenu
-import it.vfsfitvnm.vimusic.ui.items.ListItemPlaceholder
-import it.vfsfitvnm.vimusic.ui.items.LocalSongItem
-import it.vfsfitvnm.vimusic.ui.styling.Dimensions
-import it.vfsfitvnm.vimusic.utils.asMediaItem
-import it.vfsfitvnm.vimusic.utils.enqueue
-import it.vfsfitvnm.vimusic.utils.forcePlayAtIndex
-import it.vfsfitvnm.vimusic.utils.forcePlayFromBeginning
+import es.remix.vimusic.Database
+import es.remix.vimusic.LocalPlayerPadding
+import es.remix.vimusic.LocalPlayerServiceBinder
+import es.remix.vimusic.R
+import es.remix.vimusic.models.ActionInfo
+import es.remix.vimusic.models.LocalMenuState
+import es.remix.vimusic.models.Song
+import es.remix.vimusic.ui.components.CoverScaffold
+import es.remix.vimusic.ui.components.ShimmerHost
+import es.remix.vimusic.ui.components.themed.NonQueuedMediaItemMenu
+import es.remix.vimusic.ui.items.ListItemPlaceholder
+import es.remix.vimusic.ui.items.LocalSongItem
+import es.remix.vimusic.ui.styling.Dimensions
+import es.remix.vimusic.utils.asMediaItem
+import es.remix.vimusic.utils.enqueue
+import es.remix.vimusic.utils.forcePlayAtIndex
+import es.remix.vimusic.utils.forcePlayFromBeginning
 
 @ExperimentalAnimationApi
 @ExperimentalFoundationApi

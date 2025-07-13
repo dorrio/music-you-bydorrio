@@ -1,4 +1,4 @@
-package it.vfsfitvnm.vimusic.ui.screens.player
+package es.remix.vimusic.ui.screens.player
 
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
@@ -30,9 +30,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import it.vfsfitvnm.vimusic.LocalPlayerServiceBinder
-import it.vfsfitvnm.vimusic.R
-import it.vfsfitvnm.vimusic.utils.formatAsDuration
+import es.remix.vimusic.LocalPlayerServiceBinder
+import es.remix.vimusic.R
+import es.remix.vimusic.utils.formatAsDuration
 
 @OptIn(ExperimentalLayoutApi::class)
 @Composable

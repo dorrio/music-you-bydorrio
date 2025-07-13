@@ -1,7 +1,7 @@
-package it.vfsfitvnm.vimusic.enums
+package es.remix.vimusic.enums
 
 import androidx.annotation.StringRes
-import it.vfsfitvnm.vimusic.R
+import es.remix.vimusic.R
 
 enum class QuickPicksSource(
     @StringRes val resourceId: Int

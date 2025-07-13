@@ -1,4 +1,4 @@
-package it.vfsfitvnm.vimusic.service
+package es.remix.vimusic.service
 
 import android.annotation.SuppressLint
 import android.app.Notification
@@ -70,41 +70,41 @@ import androidx.media3.extractor.DefaultExtractorsFactory
 import it.vfsfitvnm.innertube.Innertube
 import it.vfsfitvnm.innertube.models.NavigationEndpoint
 import it.vfsfitvnm.innertube.requests.player
-import it.vfsfitvnm.vimusic.Database
-import it.vfsfitvnm.vimusic.MainActivity
-import it.vfsfitvnm.vimusic.R
-import it.vfsfitvnm.vimusic.enums.ExoPlayerDiskCacheMaxSize
-import it.vfsfitvnm.vimusic.models.Event
-import it.vfsfitvnm.vimusic.models.QueuedMediaItem
-import it.vfsfitvnm.vimusic.query
-import it.vfsfitvnm.vimusic.utils.InvincibleService
-import it.vfsfitvnm.vimusic.utils.RingBuffer
-import it.vfsfitvnm.vimusic.utils.TimerJob
-import it.vfsfitvnm.vimusic.utils.YouTubeRadio
-import it.vfsfitvnm.vimusic.utils.activityPendingIntent
-import it.vfsfitvnm.vimusic.utils.broadCastPendingIntent
-import it.vfsfitvnm.vimusic.utils.exoPlayerDiskCacheMaxSizeKey
-import it.vfsfitvnm.vimusic.utils.findNextMediaItemById
-import it.vfsfitvnm.vimusic.utils.forcePlayFromBeginning
-import it.vfsfitvnm.vimusic.utils.forceSeekToNext
-import it.vfsfitvnm.vimusic.utils.forceSeekToPrevious
-import it.vfsfitvnm.vimusic.utils.getEnum
-import it.vfsfitvnm.vimusic.utils.intent
-import it.vfsfitvnm.vimusic.utils.isAtLeastAndroid13
-import it.vfsfitvnm.vimusic.utils.isAtLeastAndroid6
-import it.vfsfitvnm.vimusic.utils.isAtLeastAndroid8
-import it.vfsfitvnm.vimusic.utils.isInvincibilityEnabledKey
-import it.vfsfitvnm.vimusic.utils.isShowingThumbnailInLockscreenKey
-import it.vfsfitvnm.vimusic.utils.mediaItems
-import it.vfsfitvnm.vimusic.utils.persistentQueueKey
-import it.vfsfitvnm.vimusic.utils.preferences
-import it.vfsfitvnm.vimusic.utils.queueLoopEnabledKey
-import it.vfsfitvnm.vimusic.utils.resumePlaybackWhenDeviceConnectedKey
-import it.vfsfitvnm.vimusic.utils.shouldBePlaying
-import it.vfsfitvnm.vimusic.utils.skipSilenceKey
-import it.vfsfitvnm.vimusic.utils.timer
-import it.vfsfitvnm.vimusic.utils.trackLoopEnabledKey
-import it.vfsfitvnm.vimusic.utils.volumeNormalizationKey
+import es.remix.vimusic.Database
+import es.remix.vimusic.MainActivity
+import es.remix.vimusic.R
+import es.remix.vimusic.enums.ExoPlayerDiskCacheMaxSize
+import es.remix.vimusic.models.Event
+import es.remix.vimusic.models.QueuedMediaItem
+import es.remix.vimusic.query
+import es.remix.vimusic.utils.InvincibleService
+import es.remix.vimusic.utils.RingBuffer
+import es.remix.vimusic.utils.TimerJob
+import es.remix.vimusic.utils.YouTubeRadio
+import es.remix.vimusic.utils.activityPendingIntent
+import es.remix.vimusic.utils.broadCastPendingIntent
+import es.remix.vimusic.utils.exoPlayerDiskCacheMaxSizeKey
+import es.remix.vimusic.utils.findNextMediaItemById
+import es.remix.vimusic.utils.forcePlayFromBeginning
+import es.remix.vimusic.utils.forceSeekToNext
+import es.remix.vimusic.utils.forceSeekToPrevious
+import es.remix.vimusic.utils.getEnum
+import es.remix.vimusic.utils.intent
+import es.remix.vimusic.utils.isAtLeastAndroid13
+import es.remix.vimusic.utils.isAtLeastAndroid6
+import es.remix.vimusic.utils.isAtLeastAndroid8
+import es.remix.vimusic.utils.isInvincibilityEnabledKey
+import es.remix.vimusic.utils.isShowingThumbnailInLockscreenKey
+import es.remix.vimusic.utils.mediaItems
+import es.remix.vimusic.utils.persistentQueueKey
+import es.remix.vimusic.utils.preferences
+import es.remix.vimusic.utils.queueLoopEnabledKey
+import es.remix.vimusic.utils.resumePlaybackWhenDeviceConnectedKey
+import es.remix.vimusic.utils.shouldBePlaying
+import es.remix.vimusic.utils.skipSilenceKey
+import es.remix.vimusic.utils.timer
+import es.remix.vimusic.utils.trackLoopEnabledKey
+import es.remix.vimusic.utils.volumeNormalizationKey
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -854,7 +854,7 @@ class PlayerService : InvincibleService(), Player.Listener, PlaybackStatsListene
                                         mediaItem?.let(Database::insert)
 
                                         Database.insert(
-                                            it.vfsfitvnm.vimusic.models.Format(
+                                            es.remix.vimusic.models.Format(
                                                 songId = videoId,
                                                 itag = format.itag,
                                                 mimeType = format.mimeType,
@@ -1068,10 +1068,10 @@ class PlayerService : InvincibleService(), Player.Listener, PlaybackStatsListene
             )
 
         companion object {
-            val pause = Action("it.vfsfitvnm.vimusic.pause")
-            val play = Action("it.vfsfitvnm.vimusic.play")
-            val next = Action("it.vfsfitvnm.vimusic.next")
-            val previous = Action("it.vfsfitvnm.vimusic.previous")
+            val pause = Action("es.remix.vimusic.pause")
+            val play = Action("es.remix.vimusic.play")
+            val next = Action("es.remix.vimusic.next")
+            val previous = Action("es.remix.vimusic.previous")
         }
     }
 

@@ -1,4 +1,4 @@
-package it.vfsfitvnm.vimusic.ui.components
+package es.remix.vimusic.ui.components
 
 import androidx.compose.animation.animateColorAsState
 import androidx.compose.foundation.background
@@ -19,9 +19,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
-import it.vfsfitvnm.vimusic.models.ActionInfo
-import it.vfsfitvnm.vimusic.utils.listGesturesEnabledKey
-import it.vfsfitvnm.vimusic.utils.rememberPreference
+import es.remix.vimusic.models.ActionInfo
+import es.remix.vimusic.utils.listGesturesEnabledKey
+import es.remix.vimusic.utils.rememberPreference
 
 @Composable
 fun SwipeToActionBox(

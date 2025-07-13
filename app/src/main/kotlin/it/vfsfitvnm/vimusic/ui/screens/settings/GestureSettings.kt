@@ -1,4 +1,4 @@
-package it.vfsfitvnm.vimusic.ui.screens.settings
+package es.remix.vimusic.ui.screens.settings
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -15,12 +15,12 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
-import it.vfsfitvnm.vimusic.LocalPlayerPadding
-import it.vfsfitvnm.vimusic.R
-import it.vfsfitvnm.vimusic.utils.listGesturesEnabledKey
-import it.vfsfitvnm.vimusic.utils.miniplayerGesturesEnabledKey
-import it.vfsfitvnm.vimusic.utils.playerGesturesEnabledKey
-import it.vfsfitvnm.vimusic.utils.rememberPreference
+import es.remix.vimusic.LocalPlayerPadding
+import es.remix.vimusic.R
+import es.remix.vimusic.utils.listGesturesEnabledKey
+import es.remix.vimusic.utils.miniplayerGesturesEnabledKey
+import es.remix.vimusic.utils.playerGesturesEnabledKey
+import es.remix.vimusic.utils.rememberPreference
 
 @Composable
 fun GestureSettings() {

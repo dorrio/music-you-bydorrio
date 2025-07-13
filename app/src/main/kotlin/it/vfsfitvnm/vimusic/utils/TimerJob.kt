@@ -1,4 +1,4 @@
-package it.vfsfitvnm.vimusic.utils
+package es.remix.vimusic.utils
 
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.delay

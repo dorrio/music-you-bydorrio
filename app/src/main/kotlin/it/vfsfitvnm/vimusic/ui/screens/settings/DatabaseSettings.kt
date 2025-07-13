@@ -1,4 +1,4 @@
-package it.vfsfitvnm.vimusic.ui.screens.settings
+package es.remix.vimusic.ui.screens.settings
 
 import android.annotation.SuppressLint
 import android.content.ActivityNotFoundException
@@ -29,18 +29,18 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
-import it.vfsfitvnm.vimusic.Database
-import it.vfsfitvnm.vimusic.LocalPlayerPadding
-import it.vfsfitvnm.vimusic.R
-import it.vfsfitvnm.vimusic.internal
-import it.vfsfitvnm.vimusic.path
-import it.vfsfitvnm.vimusic.query
-import it.vfsfitvnm.vimusic.service.PlayerService
-import it.vfsfitvnm.vimusic.ui.styling.Dimensions
-import it.vfsfitvnm.vimusic.utils.intent
-import it.vfsfitvnm.vimusic.utils.pauseSearchHistoryKey
-import it.vfsfitvnm.vimusic.utils.rememberPreference
-import it.vfsfitvnm.vimusic.utils.toast
+import es.remix.vimusic.Database
+import es.remix.vimusic.LocalPlayerPadding
+import es.remix.vimusic.R
+import es.remix.vimusic.internal
+import es.remix.vimusic.path
+import es.remix.vimusic.query
+import es.remix.vimusic.service.PlayerService
+import es.remix.vimusic.ui.styling.Dimensions
+import es.remix.vimusic.utils.intent
+import es.remix.vimusic.utils.pauseSearchHistoryKey
+import es.remix.vimusic.utils.rememberPreference
+import es.remix.vimusic.utils.toast
 import kotlinx.coroutines.flow.distinctUntilChanged
 import java.io.FileInputStream
 import java.io.FileOutputStream

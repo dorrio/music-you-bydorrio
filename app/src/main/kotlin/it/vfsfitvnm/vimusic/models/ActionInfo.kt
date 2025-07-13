@@ -1,4 +1,4 @@
-package it.vfsfitvnm.vimusic.models
+package es.remix.vimusic.models
 
 import androidx.annotation.StringRes
 import androidx.compose.ui.graphics.vector.ImageVector

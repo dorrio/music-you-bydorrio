@@ -1,4 +1,4 @@
-package it.vfsfitvnm.vimusic.ui.items
+package es.remix.vimusic.ui.items
 
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
@@ -31,8 +31,8 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import it.vfsfitvnm.vimusic.ui.components.themed.TextPlaceholder
-import it.vfsfitvnm.vimusic.ui.styling.shimmer
+import es.remix.vimusic.ui.components.themed.TextPlaceholder
+import es.remix.vimusic.ui.styling.shimmer
 
 @Composable
 fun ItemContainer(

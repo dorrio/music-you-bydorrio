@@ -1,4 +1,4 @@
-package it.vfsfitvnm.vimusic.ui.screens.player
+package es.remix.vimusic.ui.screens.player
 
 import androidx.compose.animation.core.LinearEasing
 import androidx.compose.animation.core.animateDp
@@ -44,17 +44,17 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.media3.common.C
 import androidx.media3.common.Player
-import it.vfsfitvnm.vimusic.Database
-import it.vfsfitvnm.vimusic.LocalPlayerServiceBinder
-import it.vfsfitvnm.vimusic.models.Song
-import it.vfsfitvnm.vimusic.query
-import it.vfsfitvnm.vimusic.ui.components.SeekBar
-import it.vfsfitvnm.vimusic.ui.styling.Dimensions
-import it.vfsfitvnm.vimusic.utils.forceSeekToNext
-import it.vfsfitvnm.vimusic.utils.forceSeekToPrevious
-import it.vfsfitvnm.vimusic.utils.formatAsDuration
-import it.vfsfitvnm.vimusic.utils.rememberPreference
-import it.vfsfitvnm.vimusic.utils.trackLoopEnabledKey
+import es.remix.vimusic.Database
+import es.remix.vimusic.LocalPlayerServiceBinder
+import es.remix.vimusic.models.Song
+import es.remix.vimusic.query
+import es.remix.vimusic.ui.components.SeekBar
+import es.remix.vimusic.ui.styling.Dimensions
+import es.remix.vimusic.utils.forceSeekToNext
+import es.remix.vimusic.utils.forceSeekToPrevious
+import es.remix.vimusic.utils.formatAsDuration
+import es.remix.vimusic.utils.rememberPreference
+import es.remix.vimusic.utils.trackLoopEnabledKey
 import kotlinx.coroutines.flow.distinctUntilChanged
 
 @Composable

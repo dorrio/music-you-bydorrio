@@ -1,4 +1,4 @@
-package it.vfsfitvnm.vimusic
+package es.remix.vimusic
 
 import android.content.ComponentName
 import android.content.Intent
@@ -46,15 +46,15 @@ import androidx.navigation.compose.rememberNavController
 import it.vfsfitvnm.innertube.Innertube
 import it.vfsfitvnm.innertube.requests.playlistPage
 import it.vfsfitvnm.innertube.requests.song
-import it.vfsfitvnm.vimusic.models.LocalMenuState
-import it.vfsfitvnm.vimusic.service.PlayerService
-import it.vfsfitvnm.vimusic.ui.components.BottomNavigation
-import it.vfsfitvnm.vimusic.ui.screens.Navigation
-import it.vfsfitvnm.vimusic.ui.screens.player.PlayerScaffold
-import it.vfsfitvnm.vimusic.ui.styling.AppTheme
-import it.vfsfitvnm.vimusic.utils.asMediaItem
-import it.vfsfitvnm.vimusic.utils.forcePlay
-import it.vfsfitvnm.vimusic.utils.intent
+import es.remix.vimusic.models.LocalMenuState
+import es.remix.vimusic.service.PlayerService
+import es.remix.vimusic.ui.components.BottomNavigation
+import es.remix.vimusic.ui.screens.Navigation
+import es.remix.vimusic.ui.screens.player.PlayerScaffold
+import es.remix.vimusic.ui.styling.AppTheme
+import es.remix.vimusic.utils.asMediaItem
+import es.remix.vimusic.utils.forcePlay
+import es.remix.vimusic.utils.intent
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.filterNotNull
 import kotlinx.coroutines.flow.first

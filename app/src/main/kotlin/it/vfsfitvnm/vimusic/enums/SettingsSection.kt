@@ -1,4 +1,4 @@
-package it.vfsfitvnm.vimusic.enums
+package es.remix.vimusic.enums
 
 import androidx.annotation.StringRes
 import androidx.compose.material.icons.Icons
@@ -10,7 +10,7 @@ import androidx.compose.material.icons.outlined.PlayArrow
 import androidx.compose.material.icons.outlined.Save
 import androidx.compose.material.icons.outlined.Tune
 import androidx.compose.ui.graphics.vector.ImageVector
-import it.vfsfitvnm.vimusic.R
+import es.remix.vimusic.R
 
 enum class SettingsSection(
     @StringRes val resourceId: Int,

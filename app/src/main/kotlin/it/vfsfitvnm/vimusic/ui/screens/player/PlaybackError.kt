@@ -1,4 +1,4 @@
-package it.vfsfitvnm.vimusic.ui.screens.player
+package es.remix.vimusic.ui.screens.player
 
 import android.util.Log
 import androidx.compose.animation.AnimatedVisibility
@@ -42,11 +42,11 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.media3.common.PlaybackException
-import it.vfsfitvnm.vimusic.R
-import it.vfsfitvnm.vimusic.service.LoginRequiredException
-import it.vfsfitvnm.vimusic.service.PlayableFormatNotFoundException
-import it.vfsfitvnm.vimusic.service.UnplayableException
-import it.vfsfitvnm.vimusic.service.VideoIdMismatchException
+import es.remix.vimusic.R
+import es.remix.vimusic.service.LoginRequiredException
+import es.remix.vimusic.service.PlayableFormatNotFoundException
+import es.remix.vimusic.service.UnplayableException
+import es.remix.vimusic.service.VideoIdMismatchException
 import java.net.UnknownHostException
 import java.nio.channels.UnresolvedAddressException
 

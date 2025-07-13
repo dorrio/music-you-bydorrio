@@ -1,4 +1,4 @@
-package it.vfsfitvnm.vimusic.ui.screens.settings
+package es.remix.vimusic.ui.screens.settings
 
 import android.content.ActivityNotFoundException
 import android.content.Intent
@@ -22,17 +22,17 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
-import it.vfsfitvnm.vimusic.LocalPlayerPadding
-import it.vfsfitvnm.vimusic.R
-import it.vfsfitvnm.vimusic.enums.NavigationLabelsVisibility
-import it.vfsfitvnm.vimusic.enums.QuickPicksSource
-import it.vfsfitvnm.vimusic.utils.isAtLeastAndroid12
-import it.vfsfitvnm.vimusic.utils.isAtLeastAndroid13
-import it.vfsfitvnm.vimusic.utils.isShowingThumbnailInLockscreenKey
-import it.vfsfitvnm.vimusic.utils.navigationLabelsVisibilityKey
-import it.vfsfitvnm.vimusic.utils.quickPicksSourceKey
-import it.vfsfitvnm.vimusic.utils.rememberPreference
-import it.vfsfitvnm.vimusic.utils.toast
+import es.remix.vimusic.LocalPlayerPadding
+import es.remix.vimusic.R
+import es.remix.vimusic.enums.NavigationLabelsVisibility
+import es.remix.vimusic.enums.QuickPicksSource
+import es.remix.vimusic.utils.isAtLeastAndroid12
+import es.remix.vimusic.utils.isAtLeastAndroid13
+import es.remix.vimusic.utils.isShowingThumbnailInLockscreenKey
+import es.remix.vimusic.utils.navigationLabelsVisibilityKey
+import es.remix.vimusic.utils.quickPicksSourceKey
+import es.remix.vimusic.utils.rememberPreference
+import es.remix.vimusic.utils.toast
 
 @Composable
 fun GeneralSettings() {

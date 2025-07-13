@@ -1,4 +1,4 @@
-package it.vfsfitvnm.vimusic.utils
+package es.remix.vimusic.utils
 
 class RingBuffer<T>(val size: Int, init: (index: Int) -> T) {
     private val list = MutableList(size, init)

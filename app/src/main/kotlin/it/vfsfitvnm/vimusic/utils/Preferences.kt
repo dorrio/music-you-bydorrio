@@ -1,4 +1,4 @@
-package it.vfsfitvnm.vimusic.utils
+package es.remix.vimusic.utils
 
 import android.content.Context
 import android.content.SharedPreferences

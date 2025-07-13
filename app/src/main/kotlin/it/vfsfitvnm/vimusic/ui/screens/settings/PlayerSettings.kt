@@ -1,4 +1,4 @@
-package it.vfsfitvnm.vimusic.ui.screens.settings
+package es.remix.vimusic.ui.screens.settings
 
 import android.content.ActivityNotFoundException
 import android.content.Intent
@@ -24,16 +24,16 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
-import it.vfsfitvnm.vimusic.LocalPlayerPadding
-import it.vfsfitvnm.vimusic.LocalPlayerServiceBinder
-import it.vfsfitvnm.vimusic.R
-import it.vfsfitvnm.vimusic.utils.isAtLeastAndroid6
-import it.vfsfitvnm.vimusic.utils.persistentQueueKey
-import it.vfsfitvnm.vimusic.utils.rememberPreference
-import it.vfsfitvnm.vimusic.utils.resumePlaybackWhenDeviceConnectedKey
-import it.vfsfitvnm.vimusic.utils.skipSilenceKey
-import it.vfsfitvnm.vimusic.utils.toast
-import it.vfsfitvnm.vimusic.utils.volumeNormalizationKey
+import es.remix.vimusic.LocalPlayerPadding
+import es.remix.vimusic.LocalPlayerServiceBinder
+import es.remix.vimusic.R
+import es.remix.vimusic.utils.isAtLeastAndroid6
+import es.remix.vimusic.utils.persistentQueueKey
+import es.remix.vimusic.utils.rememberPreference
+import es.remix.vimusic.utils.resumePlaybackWhenDeviceConnectedKey
+import es.remix.vimusic.utils.skipSilenceKey
+import es.remix.vimusic.utils.toast
+import es.remix.vimusic.utils.volumeNormalizationKey
 
 @androidx.annotation.OptIn(androidx.media3.common.util.UnstableApi::class)
 @ExperimentalAnimationApi

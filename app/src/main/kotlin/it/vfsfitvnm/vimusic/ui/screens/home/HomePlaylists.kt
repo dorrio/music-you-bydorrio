@@ -1,4 +1,4 @@
-package it.vfsfitvnm.vimusic.ui.screens.home
+package es.remix.vimusic.ui.screens.home
 
 import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.foundation.ExperimentalFoundationApi
@@ -23,22 +23,22 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
-import it.vfsfitvnm.vimusic.Database
-import it.vfsfitvnm.vimusic.LocalPlayerPadding
-import it.vfsfitvnm.vimusic.R
-import it.vfsfitvnm.vimusic.enums.BuiltInPlaylist
-import it.vfsfitvnm.vimusic.enums.PlaylistSortBy
-import it.vfsfitvnm.vimusic.enums.SortOrder
-import it.vfsfitvnm.vimusic.models.Playlist
-import it.vfsfitvnm.vimusic.query
-import it.vfsfitvnm.vimusic.ui.components.SortingHeader
-import it.vfsfitvnm.vimusic.ui.components.themed.TextFieldDialog
-import it.vfsfitvnm.vimusic.ui.items.BuiltInPlaylistItem
-import it.vfsfitvnm.vimusic.ui.items.LocalPlaylistItem
-import it.vfsfitvnm.vimusic.utils.playlistSortByKey
-import it.vfsfitvnm.vimusic.utils.playlistSortOrderKey
-import it.vfsfitvnm.vimusic.utils.rememberPreference
-import it.vfsfitvnm.vimusic.viewmodels.HomePlaylistsViewModel
+import es.remix.vimusic.Database
+import es.remix.vimusic.LocalPlayerPadding
+import es.remix.vimusic.R
+import es.remix.vimusic.enums.BuiltInPlaylist
+import es.remix.vimusic.enums.PlaylistSortBy
+import es.remix.vimusic.enums.SortOrder
+import es.remix.vimusic.models.Playlist
+import es.remix.vimusic.query
+import es.remix.vimusic.ui.components.SortingHeader
+import es.remix.vimusic.ui.components.themed.TextFieldDialog
+import es.remix.vimusic.ui.items.BuiltInPlaylistItem
+import es.remix.vimusic.ui.items.LocalPlaylistItem
+import es.remix.vimusic.utils.playlistSortByKey
+import es.remix.vimusic.utils.playlistSortOrderKey
+import es.remix.vimusic.utils.rememberPreference
+import es.remix.vimusic.viewmodels.HomePlaylistsViewModel
 
 @ExperimentalAnimationApi
 @ExperimentalFoundationApi

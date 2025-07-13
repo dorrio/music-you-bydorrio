@@ -1,4 +1,4 @@
-package it.vfsfitvnm.vimusic.ui.screens.player
+package es.remix.vimusic.ui.screens.player
 
 import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.foundation.background
@@ -52,17 +52,17 @@ import androidx.compose.ui.unit.dp
 import androidx.media3.common.MediaItem
 import androidx.media3.common.Player
 import it.vfsfitvnm.innertube.models.NavigationEndpoint
-import it.vfsfitvnm.vimusic.Database
-import it.vfsfitvnm.vimusic.LocalPlayerServiceBinder
-import it.vfsfitvnm.vimusic.R
-import it.vfsfitvnm.vimusic.models.LocalMenuState
-import it.vfsfitvnm.vimusic.ui.components.TooltipIconButton
-import it.vfsfitvnm.vimusic.ui.components.themed.BaseMediaItemMenu
-import it.vfsfitvnm.vimusic.utils.DisposableListener
-import it.vfsfitvnm.vimusic.utils.isLandscape
-import it.vfsfitvnm.vimusic.utils.positionAndDurationState
-import it.vfsfitvnm.vimusic.utils.seamlessPlay
-import it.vfsfitvnm.vimusic.utils.shouldBePlaying
+import es.remix.vimusic.Database
+import es.remix.vimusic.LocalPlayerServiceBinder
+import es.remix.vimusic.R
+import es.remix.vimusic.models.LocalMenuState
+import es.remix.vimusic.ui.components.TooltipIconButton
+import es.remix.vimusic.ui.components.themed.BaseMediaItemMenu
+import es.remix.vimusic.utils.DisposableListener
+import es.remix.vimusic.utils.isLandscape
+import es.remix.vimusic.utils.positionAndDurationState
+import es.remix.vimusic.utils.seamlessPlay
+import es.remix.vimusic.utils.shouldBePlaying
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.flowOf
 import kotlinx.coroutines.withContext

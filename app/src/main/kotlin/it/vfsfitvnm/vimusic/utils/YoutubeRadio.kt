@@ -1,4 +1,4 @@
-package it.vfsfitvnm.vimusic.utils
+package es.remix.vimusic.utils
 
 import androidx.media3.common.MediaItem
 import it.vfsfitvnm.innertube.Innertube

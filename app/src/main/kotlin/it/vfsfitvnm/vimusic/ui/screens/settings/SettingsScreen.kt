@@ -1,4 +1,4 @@
-package it.vfsfitvnm.vimusic.ui.screens.settings
+package es.remix.vimusic.ui.screens.settings
 
 import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.foundation.ExperimentalFoundationApi
@@ -38,11 +38,11 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
-import it.vfsfitvnm.vimusic.LocalPlayerPadding
-import it.vfsfitvnm.vimusic.R
-import it.vfsfitvnm.vimusic.enums.SettingsSection
-import it.vfsfitvnm.vimusic.ui.components.themed.ValueSelectorDialog
-import it.vfsfitvnm.vimusic.ui.styling.Dimensions
+import es.remix.vimusic.LocalPlayerPadding
+import es.remix.vimusic.R
+import es.remix.vimusic.enums.SettingsSection
+import es.remix.vimusic.ui.components.themed.ValueSelectorDialog
+import es.remix.vimusic.ui.styling.Dimensions
 
 @OptIn(ExperimentalMaterial3Api::class)
 @ExperimentalFoundationApi

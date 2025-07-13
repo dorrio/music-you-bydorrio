@@ -1,4 +1,4 @@
-package it.vfsfitvnm.vimusic
+package es.remix.vimusic
 
 import android.content.ContentValues
 import android.content.Context
@@ -31,28 +31,28 @@ import androidx.room.migration.Migration
 import androidx.sqlite.db.SimpleSQLiteQuery
 import androidx.sqlite.db.SupportSQLiteDatabase
 import androidx.sqlite.db.SupportSQLiteQuery
-import it.vfsfitvnm.vimusic.enums.AlbumSortBy
-import it.vfsfitvnm.vimusic.enums.ArtistSortBy
-import it.vfsfitvnm.vimusic.enums.PlaylistSortBy
-import it.vfsfitvnm.vimusic.enums.SongSortBy
-import it.vfsfitvnm.vimusic.enums.SortOrder
-import it.vfsfitvnm.vimusic.models.Album
-import it.vfsfitvnm.vimusic.models.Artist
-import it.vfsfitvnm.vimusic.models.Event
-import it.vfsfitvnm.vimusic.models.Format
-import it.vfsfitvnm.vimusic.models.Info
-import it.vfsfitvnm.vimusic.models.Lyrics
-import it.vfsfitvnm.vimusic.models.Playlist
-import it.vfsfitvnm.vimusic.models.PlaylistPreview
-import it.vfsfitvnm.vimusic.models.PlaylistWithSongs
-import it.vfsfitvnm.vimusic.models.QueuedMediaItem
-import it.vfsfitvnm.vimusic.models.SearchQuery
-import it.vfsfitvnm.vimusic.models.Song
-import it.vfsfitvnm.vimusic.models.SongAlbumMap
-import it.vfsfitvnm.vimusic.models.SongArtistMap
-import it.vfsfitvnm.vimusic.models.SongPlaylistMap
-import it.vfsfitvnm.vimusic.models.SongWithContentLength
-import it.vfsfitvnm.vimusic.models.SortedSongPlaylistMap
+import es.remix.vimusic.enums.AlbumSortBy
+import es.remix.vimusic.enums.ArtistSortBy
+import es.remix.vimusic.enums.PlaylistSortBy
+import es.remix.vimusic.enums.SongSortBy
+import es.remix.vimusic.enums.SortOrder
+import es.remix.vimusic.models.Album
+import es.remix.vimusic.models.Artist
+import es.remix.vimusic.models.Event
+import es.remix.vimusic.models.Format
+import es.remix.vimusic.models.Info
+import es.remix.vimusic.models.Lyrics
+import es.remix.vimusic.models.Playlist
+import es.remix.vimusic.models.PlaylistPreview
+import es.remix.vimusic.models.PlaylistWithSongs
+import es.remix.vimusic.models.QueuedMediaItem
+import es.remix.vimusic.models.SearchQuery
+import es.remix.vimusic.models.Song
+import es.remix.vimusic.models.SongAlbumMap
+import es.remix.vimusic.models.SongArtistMap
+import es.remix.vimusic.models.SongPlaylistMap
+import es.remix.vimusic.models.SongWithContentLength
+import es.remix.vimusic.models.SortedSongPlaylistMap
 import kotlinx.coroutines.flow.Flow
 
 @Dao

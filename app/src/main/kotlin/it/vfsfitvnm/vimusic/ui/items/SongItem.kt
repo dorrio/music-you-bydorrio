@@ -1,4 +1,4 @@
-package it.vfsfitvnm.vimusic.ui.items
+package es.remix.vimusic.ui.items
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxScope
@@ -13,9 +13,9 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.media3.common.MediaItem
 import coil3.compose.AsyncImage
 import it.vfsfitvnm.innertube.Innertube
-import it.vfsfitvnm.vimusic.models.Song
-import it.vfsfitvnm.vimusic.ui.styling.px
-import it.vfsfitvnm.vimusic.utils.thumbnail
+import es.remix.vimusic.models.Song
+import es.remix.vimusic.ui.styling.px
+import es.remix.vimusic.utils.thumbnail
 
 @Composable
 fun SongItem(

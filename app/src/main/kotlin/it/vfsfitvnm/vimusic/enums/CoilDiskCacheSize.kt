@@ -1,4 +1,4 @@
-package it.vfsfitvnm.vimusic.enums
+package es.remix.vimusic.enums
 
 enum class CoilDiskCacheMaxSize {
     `128MB`,

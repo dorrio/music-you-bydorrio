@@ -9,7 +9,7 @@ plugins {
 }
 
 android {
-    namespace = "it.vfsfitvnm.vimusic"
+    namespace = "es.remix.vimusic"
     compileSdk = 35
 
     defaultConfig {

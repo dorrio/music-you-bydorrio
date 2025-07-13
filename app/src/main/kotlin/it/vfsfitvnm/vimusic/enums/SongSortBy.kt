@@ -1,4 +1,4 @@
-package it.vfsfitvnm.vimusic.enums
+package es.remix.vimusic.enums
 
 import androidx.annotation.StringRes
 import androidx.compose.material.icons.Icons
@@ -7,8 +7,8 @@ import androidx.compose.material.icons.outlined.Person
 import androidx.compose.material.icons.outlined.Schedule
 import androidx.compose.material.icons.outlined.SortByAlpha
 import androidx.compose.ui.graphics.vector.ImageVector
-import it.vfsfitvnm.vimusic.R
-import it.vfsfitvnm.vimusic.models.SortBy
+import es.remix.vimusic.R
+import es.remix.vimusic.models.SortBy
 
 enum class SongSortBy(
     @StringRes override val text: Int,

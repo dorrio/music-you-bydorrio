@@ -1,4 +1,4 @@
-package it.vfsfitvnm.vimusic.ui.components.themed
+package es.remix.vimusic.ui.components.themed
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.BoxWithConstraints
@@ -14,10 +14,10 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.unit.dp
 import coil3.compose.AsyncImage
 import com.valentinilk.shimmer.shimmer
-import it.vfsfitvnm.vimusic.ui.styling.px
-import it.vfsfitvnm.vimusic.ui.styling.shimmer
-import it.vfsfitvnm.vimusic.utils.isLandscape
-import it.vfsfitvnm.vimusic.utils.thumbnail
+import es.remix.vimusic.ui.styling.px
+import es.remix.vimusic.ui.styling.shimmer
+import es.remix.vimusic.utils.isLandscape
+import es.remix.vimusic.utils.thumbnail
 
 @Composable
 inline fun LayoutWithAdaptiveThumbnail(

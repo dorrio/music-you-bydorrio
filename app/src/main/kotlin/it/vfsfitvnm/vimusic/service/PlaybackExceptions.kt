@@ -1,4 +1,4 @@
-package it.vfsfitvnm.vimusic.service
+package es.remix.vimusic.service
 
 import androidx.media3.common.PlaybackException
 

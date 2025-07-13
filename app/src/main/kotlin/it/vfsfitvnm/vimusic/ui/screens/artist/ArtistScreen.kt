@@ -1,4 +1,4 @@
-package it.vfsfitvnm.vimusic.ui.screens.artist
+package es.remix.vimusic.ui.screens.artist
 
 import android.content.Intent
 import androidx.compose.animation.ExperimentalAnimationApi
@@ -26,26 +26,26 @@ import it.vfsfitvnm.innertube.Innertube
 import it.vfsfitvnm.innertube.requests.itemsPage
 import it.vfsfitvnm.innertube.requests.itemsPageContinuation
 import it.vfsfitvnm.innertube.utils.from
-import it.vfsfitvnm.vimusic.Database
-import it.vfsfitvnm.vimusic.LocalPlayerServiceBinder
-import it.vfsfitvnm.vimusic.R
-import it.vfsfitvnm.vimusic.models.LocalMenuState
-import it.vfsfitvnm.vimusic.models.Section
-import it.vfsfitvnm.vimusic.query
-import it.vfsfitvnm.vimusic.ui.components.TabScaffold
-import it.vfsfitvnm.vimusic.ui.components.TooltipIconButton
-import it.vfsfitvnm.vimusic.ui.components.themed.NonQueuedMediaItemMenu
-import it.vfsfitvnm.vimusic.ui.components.themed.adaptiveThumbnailContent
-import it.vfsfitvnm.vimusic.ui.items.AlbumItem
-import it.vfsfitvnm.vimusic.ui.items.ItemPlaceholder
-import it.vfsfitvnm.vimusic.ui.items.ListItemPlaceholder
-import it.vfsfitvnm.vimusic.ui.items.SongItem
-import it.vfsfitvnm.vimusic.ui.screens.search.ItemsPage
-import it.vfsfitvnm.vimusic.utils.artistScreenTabIndexKey
-import it.vfsfitvnm.vimusic.utils.asMediaItem
-import it.vfsfitvnm.vimusic.utils.forcePlay
-import it.vfsfitvnm.vimusic.utils.rememberPreference
-import it.vfsfitvnm.vimusic.viewmodels.ArtistViewModel
+import es.remix.vimusic.Database
+import es.remix.vimusic.LocalPlayerServiceBinder
+import es.remix.vimusic.R
+import es.remix.vimusic.models.LocalMenuState
+import es.remix.vimusic.models.Section
+import es.remix.vimusic.query
+import es.remix.vimusic.ui.components.TabScaffold
+import es.remix.vimusic.ui.components.TooltipIconButton
+import es.remix.vimusic.ui.components.themed.NonQueuedMediaItemMenu
+import es.remix.vimusic.ui.components.themed.adaptiveThumbnailContent
+import es.remix.vimusic.ui.items.AlbumItem
+import es.remix.vimusic.ui.items.ItemPlaceholder
+import es.remix.vimusic.ui.items.ListItemPlaceholder
+import es.remix.vimusic.ui.items.SongItem
+import es.remix.vimusic.ui.screens.search.ItemsPage
+import es.remix.vimusic.utils.artistScreenTabIndexKey
+import es.remix.vimusic.utils.asMediaItem
+import es.remix.vimusic.utils.forcePlay
+import es.remix.vimusic.utils.rememberPreference
+import es.remix.vimusic.viewmodels.ArtistViewModel
 import kotlinx.coroutines.launch
 
 @ExperimentalFoundationApi

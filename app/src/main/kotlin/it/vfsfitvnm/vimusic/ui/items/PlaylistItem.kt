@@ -1,4 +1,4 @@
-package it.vfsfitvnm.vimusic.ui.items
+package es.remix.vimusic.ui.items
 
 import android.annotation.SuppressLint
 import androidx.compose.foundation.layout.BoxWithConstraints
@@ -19,11 +19,11 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.pluralStringResource
 import coil3.compose.AsyncImage
 import it.vfsfitvnm.innertube.Innertube
-import it.vfsfitvnm.vimusic.Database
-import it.vfsfitvnm.vimusic.R
-import it.vfsfitvnm.vimusic.models.PlaylistPreview
-import it.vfsfitvnm.vimusic.ui.styling.px
-import it.vfsfitvnm.vimusic.utils.thumbnail
+import es.remix.vimusic.Database
+import es.remix.vimusic.R
+import es.remix.vimusic.models.PlaylistPreview
+import es.remix.vimusic.ui.styling.px
+import es.remix.vimusic.utils.thumbnail
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.flow.map

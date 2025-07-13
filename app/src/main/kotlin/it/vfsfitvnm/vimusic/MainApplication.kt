@@ -1,4 +1,4 @@
-package it.vfsfitvnm.vimusic
+package es.remix.vimusic
 
 import android.app.Application
 import coil3.ImageLoader
@@ -9,10 +9,10 @@ import coil3.disk.directory
 import coil3.request.crossfade
 import it.vfsfitvnm.innertube.Innertube
 import it.vfsfitvnm.innertube.requests.visitorData
-import it.vfsfitvnm.vimusic.enums.CoilDiskCacheMaxSize
-import it.vfsfitvnm.vimusic.utils.coilDiskCacheMaxSizeKey
-import it.vfsfitvnm.vimusic.utils.getEnum
-import it.vfsfitvnm.vimusic.utils.preferences
+import es.remix.vimusic.enums.CoilDiskCacheMaxSize
+import es.remix.vimusic.utils.coilDiskCacheMaxSizeKey
+import es.remix.vimusic.utils.getEnum
+import es.remix.vimusic.utils.preferences
 import kotlinx.coroutines.DelicateCoroutinesApi
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch

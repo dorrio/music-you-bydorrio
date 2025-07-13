@@ -1,4 +1,4 @@
-package it.vfsfitvnm.vimusic.models
+package es.remix.vimusic.models
 
 import androidx.annotation.StringRes
 import androidx.compose.material.icons.Icons
@@ -13,7 +13,7 @@ import androidx.compose.material.icons.outlined.Home
 import androidx.compose.material.icons.outlined.MusicNote
 import androidx.compose.material.icons.outlined.Person
 import androidx.compose.ui.graphics.vector.ImageVector
-import it.vfsfitvnm.vimusic.R
+import es.remix.vimusic.R
 
 sealed class Screen(
     val route: String,

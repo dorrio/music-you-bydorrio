@@ -1,4 +1,4 @@
-package it.vfsfitvnm.vimusic.utils
+package es.remix.vimusic.utils
 
 import android.net.Uri
 import android.os.Build
@@ -10,7 +10,7 @@ import androidx.media3.common.MediaMetadata
 import it.vfsfitvnm.innertube.Innertube
 import it.vfsfitvnm.innertube.requests.playlistPageContinuation
 import it.vfsfitvnm.innertube.utils.plus
-import it.vfsfitvnm.vimusic.models.Song
+import es.remix.vimusic.models.Song
 
 val Innertube.SongItem.asMediaItem: MediaItem
     @androidx.annotation.OptIn(androidx.media3.common.util.UnstableApi::class)
