@@ -1,148 +1,140 @@
 plugins {
-    id("com.android.application")
-    id("org.jetbrains.kotlin.android")
-    id("org.jetbrains.kotlin.plugin.compose")
-    // Agrega otros plugins que necesites, por ejemplo:
-    // id("kotlin-kapt")
-    // id("dagger.hilt.android.plugin")
+    alias(libs.plugins.android.application)
+    alias(libs.plugins.compose.compiler)
+    alias(libs.plugins.kotlin)
+    alias(libs.plugins.kotlin.ksp)
+    // Descomenta la siguiente línea si usas kotlinx.serialization directamente en este módulo
+    // y tienes el plugin definido en tu libs.versions.toml
+    // alias(libs.plugins.kotlin.serialization)
 }
 
 android {
-    namespace = "com.tudominio.tuapp" // Cambia por tu package name
-    compileSdk = 34
+    namespace = "it.vfsfitvnm.vimusic"
+    compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.tudominio.tuapp" // Cambia por tu application ID
-        minSdk = 24
-        targetSdk = 34
-        versionCode = 1
-        versionName = "1.0"
-
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-        vectorDrawables {
-            useSupportLibrary = true
-        }
+        applicationId = "com.github.musicyou"
+        minSdk = 21
+        targetSdk = 35
+        versionCode = 12
+        versionName = "0.12"
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner" // Añadido para completitud
+        vectorDrawables.useSupportLibrary = true // Añadido para completitud
     }
 
     signingConfigs {
         create("release") {
-            val keystoreFile = project.findProperty("KEYSTORE_FILE") as String?
-            val keystorePassword = project.findProperty("KEYSTORE_PASSWORD") as String?
-            val keyAliasProperty = project.findProperty("KEY_ALIAS") as String?
-            val keyPasswordProperty = project.findProperty("KEY_PASSWORD") as String?
-            
-            if (!keystoreFile.isNullOrEmpty() && !keystorePassword.isNullOrEmpty() && 
-                !keyAliasProperty.isNullOrEmpty() && !keyPasswordProperty.isNullOrEmpty()) {
-                storeFile = file(keystoreFile)
-                storePassword = keystorePassword
-                keyAlias = keyAliasProperty
-                keyPassword = keyPasswordProperty
-            } else {
-                // Configuración por defecto para desarrollo local
-                storeFile = file("debug.keystore")
-                storePassword = "android"
-                keyAlias = "androiddebugkey"
-                keyPassword = "android"
+            val storeFileEnv = System.getenv("KEYSTORE_FILE_PATH")
+            val storePasswordEnv = System.getenv("KEYSTORE_PASSWORD")
+            val keyAliasEnv = System.getenv("KEY_ALIAS")
+            val keyPasswordEnv = System.getenv("KEY_PASSWORD")
+
+            if (storeFileEnv != null && storePasswordEnv != null && keyAliasEnv != null && keyPasswordEnv != null) {
+                storeFile = file(storeFileEnv)
+                storePassword = storePasswordEnv
+                keyAlias = keyAliasEnv
+                keyPassword = keyPasswordEnv
+            } else if (System.getenv("CI") == null) { // Solo muestra advertencia si NO estamos en CI
+                println(
+                    """
+                    Advertencia local: No se encontraron todas las variables de entorno para la firma de release.
+                    (KEYSTORE_FILE_PATH, KEYSTORE_PASSWORD, KEY_ALIAS, KEY_PASSWORD).
+                    El APK de release no será firmado si estas variables no están disponibles.
+                    Para builds de CI, se espera que estas variables estén siempre presentes.
+                    """.trimIndent()
+                )
             }
+            // En CI, si las variables no están, el build fallará cuando intente usar una config de firma inválida.
+        }
+    }
+
+    splits {
+        abi {
+            reset()
+            isUniversalApk = true
         }
     }
 
     buildTypes {
         debug {
-            isDebuggable = true
             applicationIdSuffix = ".debug"
-            versionNameSuffix = "-debug"
+            isDebuggable = true // Por defecto es true para debug, pero explícito no hace daño
         }
-        
+
         release {
             isMinifyEnabled = true
             isShrinkResources = true
-            signingConfig = signingConfigs.getByName("release")
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+            signingConfig = signingConfigs.getByName("release")
         }
     }
 
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
-    }
-
-    kotlinOptions {
-        jvmTarget = "1.8"
+    sourceSets.all {
+        kotlin.srcDir("src/$name/kotlin")
     }
 
     buildFeatures {
         compose = true
-        viewBinding = true // Si usas View Binding
-        dataBinding = true // Si usas Data Binding
     }
 
-    packaging {
-        resources {
-            excludes += "/META-INF/{AL2.0,LGPL2.1}"
-        }
+    // composeOptions {
+    // La versión del compilador de Compose debería ser manejada por el plugin
+    // org.jetbrains.kotlin.plugin.compose y su versión alineada con Kotlin.
+    // Si necesitas especificarla explícitamente, descomenta y ajusta:
+    // kotlinCompilerExtensionVersion = "COMPATIBLE_VERSION_WITH_KOTLIN_2_1_20"
+    // }
+
+    compileOptions {
+        isCoreLibraryDesugaringEnabled = true
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        freeCompilerArgs += "-Xcontext-receivers"
+        jvmTarget = "17"
     }
 }
 
+ksp {
+    arg("room.schemaLocation", "$projectDir/schemas")
+}
+
 dependencies {
-    // Core Android
-    implementation("androidx.core:core-ktx:1.12.0")
-    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.7.0")
-    implementation("androidx.activity:activity-compose:1.8.2")
-    
-    // Compose BOM
-    implementation(platform("androidx.compose:compose-bom:2024.02.00"))
-    implementation("androidx.compose.ui:ui")
-    implementation("androidx.compose.ui:ui-graphics")
-    implementation("androidx.compose.ui:ui-tooling-preview")
-    implementation("androidx.compose.material3:material3")
-    
-    // Navigation
-    implementation("androidx.navigation:navigation-compose:2.7.6")
-    
-    // ViewModel
-    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.7.0")
-    
-    // Coroutines
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
-    
-    // Networking (si usas Retrofit)
-    implementation("com.squareup.retrofit2:retrofit:2.9.0")
-    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
-    implementation("com.squareup.okhttp3:logging-interceptor:4.12.0")
-    
-    // Image loading (si usas Coil)
-    implementation("io.coil-kt:coil-compose:2.5.0")
-    
-    // Dependency Injection (si usas Hilt)
-    // implementation("com.google.dagger:hilt-android:2.48")
-    // kapt("com.google.dagger:hilt-compiler:2.48")
-    // implementation("androidx.hilt:hilt-navigation-compose:1.1.0")
-    
-    // Room Database (si usas Room)
-    // implementation("androidx.room:room-runtime:2.6.1")
-    // implementation("androidx.room:room-ktx:2.6.1")
-    // kapt("androidx.room:room-compiler:2.6.1")
-    
-    // Media playback (para tu app de música)
-    implementation("androidx.media3:media3-exoplayer:1.2.1")
-    implementation("androidx.media3:media3-ui:1.2.1")
-    implementation("androidx.media3:media3-session:1.2.1")
-    
-    // Permissions
-    implementation("com.google.accompanist:accompanist-permissions:0.32.0")
-    
-    // Testing
-    testImplementation("junit:junit:4.13.2")
-    androidTestImplementation("androidx.test.ext:junit:1.1.5")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
-    androidTestImplementation(platform("androidx.compose:compose-bom:2024.02.00"))
-    androidTestImplementation("androidx.compose.ui:ui-test-junit4")
-    
-    // Debug
-    debugImplementation("androidx.compose.ui:ui-tooling")
-    debugImplementation("androidx.compose.ui:ui-test-manifest")
+    implementation(platform(libs.compose.bom))
+    implementation(libs.compose.activity)
+    implementation(libs.coil.compose)
+    implementation(libs.coil.network)
+    implementation(libs.compose.material.icons)
+    implementation(libs.compose.material3)
+    implementation(libs.compose.navigation)
+    implementation(libs.compose.shimmer)
+    implementation(libs.compose.ui)
+    implementation(libs.compose.ui.util) // ui-util
+    implementation(libs.core.splashscreen)
+    implementation(libs.lifecycle.viewmodel.compose) // lifecycle-viewmodel-compose
+    implementation(libs.material.motion.compose) // material-motion-compose
+    implementation(libs.media)
+    implementation(libs.media3.exoplayer)
+    implementation(libs.reorderable)
+    implementation(libs.room) // room-runtime
+    ksp(libs.room.compiler) // room-compiler
+
+    implementation(projects.github)
+    implementation(projects.innertube)
+    implementation(projects.kugou)
+
+    coreLibraryDesugaring(libs.desugaring)
+
+    // Dependencias de Testing (Añade alias a tu libs.versions.toml si no los tienes)
+    // testImplementation("junit:junit:4.13.2")
+    // androidTestImplementation("androidx.test.ext:junit:1.2.1")
+    // androidTestImplementation("androidx.test.espresso:espresso-core:3.6.1")
+    // androidTestImplementation(platform(libs.compose.bom))
+    // debugImplementation(libs.compose.ui.tooling) // Para previews y layout inspector
+    // debugImplementation(libs.compose.ui.test.manifest) // Para tests de UI
+    // androidTestImplementation(libs.compose.ui.test.junit4) // Si tienes un alias para compose.ui.test.junit4
 }
