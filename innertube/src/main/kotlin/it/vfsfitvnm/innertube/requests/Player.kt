@@ -1,4 +1,4 @@
-package it.vfsfitvnm.innertube.requests
+package es-remix.innertube.requests
 
 import io.ktor.client.call.body
 import io.ktor.client.request.get
@@ -6,12 +6,12 @@ import io.ktor.client.request.post
 import io.ktor.client.request.setBody
 import io.ktor.http.ContentType
 import io.ktor.http.contentType
-import it.vfsfitvnm.innertube.Innertube
-import it.vfsfitvnm.innertube.models.Context
-import it.vfsfitvnm.innertube.models.PlayerResponse
-import it.vfsfitvnm.innertube.models.YouTubeClient
-import it.vfsfitvnm.innertube.models.bodies.PlayerBody
-import it.vfsfitvnm.innertube.utils.runCatchingNonCancellable
+import es-remix.innertube.Innertube
+import es-remix.innertube.models.Context
+import es-remix.innertube.models.PlayerResponse
+import es-remix.innertube.models.YouTubeClient
+import es-remix.innertube.models.bodies.PlayerBody
+import es-remix.innertube.utils.runCatchingNonCancellable
 import kotlinx.serialization.Serializable
 
 suspend fun Innertube.player(videoId: String) = runCatchingNonCancellable {

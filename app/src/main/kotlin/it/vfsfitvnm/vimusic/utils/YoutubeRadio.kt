@@ -1,8 +1,8 @@
 package es.remix.vimusic.utils
 
 import androidx.media3.common.MediaItem
-import it.vfsfitvnm.innertube.Innertube
-import it.vfsfitvnm.innertube.requests.nextPage
+import es-remix.innertube.Innertube
+import es-remix.innertube.requests.nextPage
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 

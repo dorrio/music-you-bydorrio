@@ -1,17 +1,17 @@
-package it.vfsfitvnm.innertube.requests
+package es-remix.innertube.requests
 
 import io.ktor.client.call.body
 import io.ktor.client.request.post
 import io.ktor.client.request.setBody
-import it.vfsfitvnm.innertube.Innertube
-import it.vfsfitvnm.innertube.models.BrowseResponse
-import it.vfsfitvnm.innertube.models.ContinuationResponse
-import it.vfsfitvnm.innertube.models.MusicCarouselShelfRenderer
-import it.vfsfitvnm.innertube.models.MusicShelfRenderer
-import it.vfsfitvnm.innertube.models.bodies.BrowseBody
-import it.vfsfitvnm.innertube.models.bodies.ContinuationBody
-import it.vfsfitvnm.innertube.utils.from
-import it.vfsfitvnm.innertube.utils.runCatchingNonCancellable
+import es-remix.innertube.Innertube
+import es-remix.innertube.models.BrowseResponse
+import es-remix.innertube.models.ContinuationResponse
+import es-remix.innertube.models.MusicCarouselShelfRenderer
+import es-remix.innertube.models.MusicShelfRenderer
+import es-remix.innertube.models.bodies.BrowseBody
+import es-remix.innertube.models.bodies.ContinuationBody
+import es-remix.innertube.utils.from
+import es-remix.innertube.utils.runCatchingNonCancellable
 
 suspend fun Innertube.playlistPage(
     browseId: String,

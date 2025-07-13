@@ -28,8 +28,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
-import it.vfsfitvnm.innertube.Innertube
-import it.vfsfitvnm.innertube.models.NavigationEndpoint
+import es-remix.innertube.Innertube
+import es-remix.innertube.models.NavigationEndpoint
 import es.remix.vimusic.LocalPlayerPadding
 import es.remix.vimusic.LocalPlayerServiceBinder
 import es.remix.vimusic.R

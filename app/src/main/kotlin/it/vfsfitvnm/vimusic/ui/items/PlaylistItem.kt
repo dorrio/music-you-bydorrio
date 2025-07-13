@@ -18,7 +18,7 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.pluralStringResource
 import coil3.compose.AsyncImage
-import it.vfsfitvnm.innertube.Innertube
+import es-remix.innertube.Innertube
 import es.remix.vimusic.Database
 import es.remix.vimusic.R
 import es.remix.vimusic.models.PlaylistPreview

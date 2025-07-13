@@ -7,9 +7,9 @@ import androidx.core.net.toUri
 import androidx.core.os.bundleOf
 import androidx.media3.common.MediaItem
 import androidx.media3.common.MediaMetadata
-import it.vfsfitvnm.innertube.Innertube
-import it.vfsfitvnm.innertube.requests.playlistPageContinuation
-import it.vfsfitvnm.innertube.utils.plus
+import es-remix.innertube.Innertube
+import es-remix.innertube.requests.playlistPageContinuation
+import es-remix.innertube.utils.plus
 import es.remix.vimusic.models.Song
 
 val Innertube.SongItem.asMediaItem: MediaItem

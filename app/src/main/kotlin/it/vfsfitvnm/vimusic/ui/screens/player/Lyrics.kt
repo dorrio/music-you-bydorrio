@@ -52,9 +52,9 @@ import androidx.compose.ui.unit.dp
 import androidx.media3.common.C
 import androidx.media3.common.MediaMetadata
 import com.valentinilk.shimmer.shimmer
-import it.vfsfitvnm.innertube.Innertube
-import it.vfsfitvnm.innertube.requests.lyrics
-import it.vfsfitvnm.kugou.KuGou
+import es-remix.innertube.Innertube
+import es-remix.innertube.requests.lyrics
+import es-remix.kugou.KuGou
 import es.remix.vimusic.Database
 import es.remix.vimusic.LocalPlayerServiceBinder
 import es.remix.vimusic.R

@@ -15,7 +15,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import it.vfsfitvnm.innertube.Innertube
+import es-remix.innertube.Innertube
 import es.remix.vimusic.LocalPlayerPadding
 import es.remix.vimusic.LocalPlayerServiceBinder
 import es.remix.vimusic.R

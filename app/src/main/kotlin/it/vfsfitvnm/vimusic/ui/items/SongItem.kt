@@ -12,7 +12,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
 import androidx.media3.common.MediaItem
 import coil3.compose.AsyncImage
-import it.vfsfitvnm.innertube.Innertube
+import es-remix.innertube.Innertube
 import es.remix.vimusic.models.Song
 import es.remix.vimusic.ui.styling.px
 import es.remix.vimusic.utils.thumbnail

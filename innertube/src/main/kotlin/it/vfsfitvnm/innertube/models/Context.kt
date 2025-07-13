@@ -1,4 +1,4 @@
-package it.vfsfitvnm.innertube.models
+package es-remix.innertube.models
 
 import kotlinx.serialization.Serializable
 

@@ -1,15 +1,15 @@
-package it.vfsfitvnm.innertube.requests
+package es-remix.innertube.requests
 
 import io.ktor.client.call.body
 import io.ktor.client.request.post
 import io.ktor.client.request.setBody
-import it.vfsfitvnm.innertube.Innertube
-import it.vfsfitvnm.innertube.models.ContinuationResponse
-import it.vfsfitvnm.innertube.models.MusicShelfRenderer
-import it.vfsfitvnm.innertube.models.SearchResponse
-import it.vfsfitvnm.innertube.models.bodies.ContinuationBody
-import it.vfsfitvnm.innertube.models.bodies.SearchBody
-import it.vfsfitvnm.innertube.utils.runCatchingNonCancellable
+import es-remix.innertube.Innertube
+import es-remix.innertube.models.ContinuationResponse
+import es-remix.innertube.models.MusicShelfRenderer
+import es-remix.innertube.models.SearchResponse
+import es-remix.innertube.models.bodies.ContinuationBody
+import es-remix.innertube.models.bodies.SearchBody
+import es-remix.innertube.utils.runCatchingNonCancellable
 
 suspend fun <T : Innertube.Item> Innertube.searchPage(
     query: String,
