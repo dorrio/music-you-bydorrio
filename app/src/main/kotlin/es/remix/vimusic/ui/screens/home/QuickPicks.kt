@@ -48,8 +48,8 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.times
 import androidx.lifecycle.viewmodel.compose.viewModel
-import es-remix.innertube.Innertube
-import es-remix.innertube.models.NavigationEndpoint
+import es.remix.innertube.Innertube
+import es.remix.innertube.models.NavigationEndpoint
 import es.remix.vimusic.Database
 import es.remix.vimusic.LocalPlayerPadding
 import es.remix.vimusic.LocalPlayerServiceBinder

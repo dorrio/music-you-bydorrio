@@ -28,8 +28,8 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
-import es-remix.innertube.Innertube
-import es-remix.innertube.utils.plus
+import es.remix.innertube.Innertube
+import es.remix.innertube.utils.plus
 import es.remix.vimusic.LocalPlayerPadding
 import es.remix.vimusic.R
 import es.remix.vimusic.ui.components.ShimmerHost

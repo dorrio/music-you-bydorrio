@@ -35,8 +35,8 @@ import androidx.compose.ui.unit.dp
 import androidx.media3.common.util.UnstableApi
 import androidx.media3.datasource.cache.Cache
 import androidx.media3.datasource.cache.CacheSpan
-import es-remix.innertube.Innertube
-import es-remix.innertube.requests.player
+import es.remix.innertube.Innertube
+import es.remix.innertube.requests.player
 import es.remix.vimusic.Database
 import es.remix.vimusic.LocalPlayerServiceBinder
 import es.remix.vimusic.R

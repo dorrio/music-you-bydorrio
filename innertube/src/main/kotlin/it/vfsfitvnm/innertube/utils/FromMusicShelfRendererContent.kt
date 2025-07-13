@@ -1,8 +1,8 @@
-package es-remix.innertube.utils
+package es.remix.innertube.utils
 
-import es-remix.innertube.Innertube
-import es-remix.innertube.models.MusicShelfRenderer
-import es-remix.innertube.models.NavigationEndpoint
+import es.remix.innertube.Innertube
+import es.remix.innertube.models.MusicShelfRenderer
+import es.remix.innertube.models.NavigationEndpoint
 
 fun Innertube.SongItem.Companion.from(content: MusicShelfRenderer.Content): Innertube.SongItem? {
     val (mainRuns, otherRuns) = content.runs

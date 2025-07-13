@@ -2,8 +2,8 @@ package es.remix.vimusic.viewmodels
 
 import androidx.compose.runtime.mutableStateMapOf
 import androidx.lifecycle.ViewModel
-import es-remix.innertube.Innertube
-import es-remix.innertube.utils.plus
+import es.remix.innertube.Innertube
+import es.remix.innertube.utils.plus
 
 class ItemsPageViewModel<T : Innertube.Item> : ViewModel() {
     var itemsMap: MutableMap<String, Innertube.ItemsPage<T>?> = mutableStateMapOf()

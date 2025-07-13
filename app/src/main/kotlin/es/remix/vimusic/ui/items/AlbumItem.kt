@@ -8,7 +8,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
 import coil3.compose.AsyncImage
-import es-remix.innertube.Innertube
+import es.remix.innertube.Innertube
 import es.remix.vimusic.models.Album
 import es.remix.vimusic.ui.styling.px
 import es.remix.vimusic.utils.thumbnail

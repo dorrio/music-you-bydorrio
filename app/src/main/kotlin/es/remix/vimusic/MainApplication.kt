@@ -7,8 +7,8 @@ import coil3.SingletonImageLoader
 import coil3.disk.DiskCache
 import coil3.disk.directory
 import coil3.request.crossfade
-import es-remix.innertube.Innertube
-import es-remix.innertube.requests.visitorData
+import es.remix.innertube.Innertube
+import es.remix.innertube.requests.visitorData
 import es.remix.vimusic.enums.CoilDiskCacheMaxSize
 import es.remix.vimusic.utils.coilDiskCacheMaxSizeKey
 import es.remix.vimusic.utils.getEnum

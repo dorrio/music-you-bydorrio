@@ -1,4 +1,4 @@
-package es-remix.kugou
+package es.remix
 
 import kotlin.coroutines.cancellation.CancellationException
 

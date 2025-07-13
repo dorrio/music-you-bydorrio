@@ -67,9 +67,9 @@ import androidx.media3.exoplayer.mediacodec.MediaCodecSelector
 import androidx.media3.exoplayer.source.DefaultMediaSourceFactory
 import androidx.media3.exoplayer.source.MediaSource
 import androidx.media3.extractor.DefaultExtractorsFactory
-import es-remix.innertube.Innertube
-import es-remix.innertube.models.NavigationEndpoint
-import es-remix.innertube.requests.player
+import es.remix.innertube.Innertube
+import es.remix.innertube.models.NavigationEndpoint
+import es.remix.innertube.requests.player
 import es.remix.vimusic.Database
 import es.remix.vimusic.MainActivity
 import es.remix.vimusic.R

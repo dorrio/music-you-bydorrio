@@ -1,4 +1,4 @@
-package es-remix.innertube
+package es.remix.innertube
 
 import io.ktor.client.HttpClient
 import io.ktor.client.engine.okhttp.OkHttp
@@ -11,9 +11,9 @@ import io.ktor.client.request.header
 import io.ktor.http.ContentType
 import io.ktor.http.contentType
 import io.ktor.serialization.kotlinx.json.json
-import es-remix.innertube.models.NavigationEndpoint
-import es-remix.innertube.models.Runs
-import es-remix.innertube.models.Thumbnail
+import es.remix.innertube.models.NavigationEndpoint
+import es.remix.innertube.models.Runs
+import es.remix.innertube.models.Thumbnail
 import kotlinx.serialization.json.Json
 
 object Innertube {

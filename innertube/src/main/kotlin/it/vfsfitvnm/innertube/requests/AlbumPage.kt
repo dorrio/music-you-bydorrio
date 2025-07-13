@@ -1,8 +1,8 @@
-package es-remix.innertube.requests
+package es.remix.innertube.requests
 
 import io.ktor.http.Url
-import es-remix.innertube.Innertube
-import es-remix.innertube.models.NavigationEndpoint
+import es.remix.innertube.Innertube
+import es.remix.innertube.models.NavigationEndpoint
 
 suspend fun Innertube.albumPage(browseId: String): Result<Innertube.PlaylistOrAlbumPage>? {
     return playlistPage(browseId = browseId)?.map { album ->

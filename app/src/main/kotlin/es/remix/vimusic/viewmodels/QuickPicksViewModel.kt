@@ -4,8 +4,8 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
-import es-remix.innertube.Innertube
-import es-remix.innertube.requests.relatedPage
+import es.remix.innertube.Innertube
+import es.remix.innertube.requests.relatedPage
 import es.remix.vimusic.Database
 import es.remix.vimusic.enums.QuickPicksSource
 import es.remix.vimusic.models.Song

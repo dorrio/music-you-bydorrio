@@ -1,9 +1,9 @@
-package es-remix.innertube.utils
+package es.remix.innertube.utils
 
-import es-remix.innertube.Innertube
-import es-remix.innertube.models.MusicResponsiveListItemRenderer
-import es-remix.innertube.models.NavigationEndpoint
-import es-remix.innertube.models.Runs
+import es.remix.innertube.Innertube
+import es.remix.innertube.models.MusicResponsiveListItemRenderer
+import es.remix.innertube.models.NavigationEndpoint
+import es.remix.innertube.models.Runs
 
 fun Innertube.SongItem.Companion.from(renderer: MusicResponsiveListItemRenderer): Innertube.SongItem? {
     return Innertube.SongItem(

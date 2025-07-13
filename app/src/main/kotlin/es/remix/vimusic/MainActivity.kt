@@ -43,9 +43,9 @@ import androidx.lifecycle.lifecycleScope
 import androidx.media3.common.MediaItem
 import androidx.media3.common.Player
 import androidx.navigation.compose.rememberNavController
-import es-remix.innertube.Innertube
-import es-remix.innertube.requests.playlistPage
-import es-remix.innertube.requests.song
+import es.remix.innertube.Innertube
+import es.remix.innertube.requests.playlistPage
+import es.remix.innertube.requests.song
 import es.remix.vimusic.models.LocalMenuState
 import es.remix.vimusic.service.PlayerService
 import es.remix.vimusic.ui.components.BottomNavigation

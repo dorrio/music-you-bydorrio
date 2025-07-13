@@ -31,9 +31,9 @@ import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import es-remix.innertube.Innertube
-import es-remix.innertube.requests.searchPage
-import es-remix.innertube.utils.from
+import es.remix.innertube.Innertube
+import es.remix.innertube.requests.searchPage
+import es.remix.innertube.utils.from
 import es.remix.vimusic.Database
 import es.remix.vimusic.LocalPlayerPadding
 import es.remix.vimusic.LocalPlayerServiceBinder

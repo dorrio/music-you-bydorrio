@@ -1,4 +1,4 @@
-package es-remix.innertube.models
+package es.remix.innertube.models
 
 import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.Serializable

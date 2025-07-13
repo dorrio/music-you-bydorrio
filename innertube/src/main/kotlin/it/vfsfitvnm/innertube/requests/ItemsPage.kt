@@ -1,18 +1,18 @@
-package es-remix.innertube.requests
+package es.remix.innertube.requests
 
 import io.ktor.client.call.body
 import io.ktor.client.request.post
 import io.ktor.client.request.setBody
-import es-remix.innertube.Innertube
-import es-remix.innertube.models.BrowseResponse
-import es-remix.innertube.models.ContinuationResponse
-import es-remix.innertube.models.GridRenderer
-import es-remix.innertube.models.MusicResponsiveListItemRenderer
-import es-remix.innertube.models.MusicShelfRenderer
-import es-remix.innertube.models.MusicTwoRowItemRenderer
-import es-remix.innertube.models.bodies.BrowseBody
-import es-remix.innertube.models.bodies.ContinuationBody
-import es-remix.innertube.utils.runCatchingNonCancellable
+import es.remix.innertube.Innertube
+import es.remix.innertube.models.BrowseResponse
+import es.remix.innertube.models.ContinuationResponse
+import es.remix.innertube.models.GridRenderer
+import es.remix.innertube.models.MusicResponsiveListItemRenderer
+import es.remix.innertube.models.MusicShelfRenderer
+import es.remix.innertube.models.MusicTwoRowItemRenderer
+import es.remix.innertube.models.bodies.BrowseBody
+import es.remix.innertube.models.bodies.ContinuationBody
+import es.remix.innertube.utils.runCatchingNonCancellable
 
 suspend fun <T : Innertube.Item> Innertube.itemsPage(
     browseId: String,

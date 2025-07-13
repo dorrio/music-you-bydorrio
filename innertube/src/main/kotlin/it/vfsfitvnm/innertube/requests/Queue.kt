@@ -1,13 +1,13 @@
-package es-remix.innertube.requests
+package es.remix.innertube.requests
 
 import io.ktor.client.call.body
 import io.ktor.client.request.post
 import io.ktor.client.request.setBody
-import es-remix.innertube.Innertube
-import es-remix.innertube.models.GetQueueResponse
-import es-remix.innertube.models.bodies.QueueBody
-import es-remix.innertube.utils.from
-import es-remix.innertube.utils.runCatchingNonCancellable
+import es.remix.innertube.Innertube
+import es.remix.innertube.models.GetQueueResponse
+import es.remix.innertube.models.bodies.QueueBody
+import es.remix.innertube.utils.from
+import es.remix.innertube.utils.runCatchingNonCancellable
 
 suspend fun Innertube.queue(videoIds: List<String>) = runCatchingNonCancellable {
     val response = client.post(QUEUE) {

@@ -1,8 +1,8 @@
-package es-remix.innertube.requests
+package es.remix.innertube.requests
 
 import io.ktor.client.request.get
 import io.ktor.client.statement.bodyAsText
-import es-remix.innertube.Innertube
+import es.remix.innertube.Innertube
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonPrimitive
 import kotlinx.serialization.json.contentOrNull

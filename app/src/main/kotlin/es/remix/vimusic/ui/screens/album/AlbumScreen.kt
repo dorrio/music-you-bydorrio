@@ -20,8 +20,8 @@ import androidx.compose.runtime.setValue
 import androidx.compose.runtime.snapshotFlow
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
-import es-remix.innertube.Innertube
-import es-remix.innertube.requests.albumPage
+import es.remix.innertube.Innertube
+import es.remix.innertube.requests.albumPage
 import es.remix.vimusic.Database
 import es.remix.vimusic.R
 import es.remix.vimusic.models.Album

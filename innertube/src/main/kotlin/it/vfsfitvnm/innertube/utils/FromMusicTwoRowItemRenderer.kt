@@ -1,7 +1,7 @@
-package es-remix.innertube.utils
+package es.remix.innertube.utils
 
-import es-remix.innertube.Innertube
-import es-remix.innertube.models.MusicTwoRowItemRenderer
+import es.remix.innertube.Innertube
+import es.remix.innertube.models.MusicTwoRowItemRenderer
 
 fun Innertube.AlbumItem.Companion.from(renderer: MusicTwoRowItemRenderer): Innertube.AlbumItem? {
     return Innertube.AlbumItem(

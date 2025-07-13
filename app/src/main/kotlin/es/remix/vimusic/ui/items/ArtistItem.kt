@@ -12,7 +12,7 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import coil3.compose.AsyncImage
-import es-remix.innertube.Innertube
+import es.remix.innertube.Innertube
 import es.remix.vimusic.R
 import es.remix.vimusic.models.Artist
 import es.remix.vimusic.ui.styling.px

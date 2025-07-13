@@ -50,7 +50,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.dp
 import androidx.media3.common.MediaItem
-import es-remix.innertube.models.NavigationEndpoint
+import es.remix.innertube.models.NavigationEndpoint
 import es.remix.vimusic.Database
 import es.remix.vimusic.LocalPlayerServiceBinder
 import es.remix.vimusic.R

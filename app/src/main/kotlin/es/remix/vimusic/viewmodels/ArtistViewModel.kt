@@ -5,8 +5,8 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.compose.runtime.snapshotFlow
 import androidx.lifecycle.ViewModel
-import es-remix.innertube.Innertube
-import es-remix.innertube.requests.artistPage
+import es.remix.innertube.Innertube
+import es.remix.innertube.requests.artistPage
 import es.remix.vimusic.Database
 import es.remix.vimusic.models.Artist
 import kotlinx.coroutines.Dispatchers

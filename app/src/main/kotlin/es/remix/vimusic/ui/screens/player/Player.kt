@@ -51,7 +51,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.media3.common.MediaItem
 import androidx.media3.common.Player
-import es-remix.innertube.models.NavigationEndpoint
+import es.remix.innertube.models.NavigationEndpoint
 import es.remix.vimusic.Database
 import es.remix.vimusic.LocalPlayerServiceBinder
 import es.remix.vimusic.R

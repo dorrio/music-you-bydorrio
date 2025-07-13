@@ -1,4 +1,4 @@
-package es-remix.innertube.models
+package es.remix.innertube.models
 
 import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.Serializable
@@ -16,7 +16,7 @@ data class ThumbnailRenderer(
     ) {
         @Serializable
         data class Thumbnail(
-            val thumbnails: List<es-remix.innertube.models.Thumbnail>?
+            val thumbnails: List<es.remix.innertube.models.Thumbnail>?
         )
     }
 }

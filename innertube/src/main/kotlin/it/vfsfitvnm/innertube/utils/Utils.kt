@@ -1,8 +1,8 @@
-package es-remix.innertube.utils
+package es.remix.innertube.utils
 
 import io.ktor.utils.io.CancellationException
-import es-remix.innertube.Innertube
-import es-remix.innertube.models.SectionListRenderer
+import es.remix.innertube.Innertube
+import es.remix.innertube.models.SectionListRenderer
 
 internal fun SectionListRenderer.findSectionByTitle(text: String): SectionListRenderer.Content? {
     return contents?.find { content ->

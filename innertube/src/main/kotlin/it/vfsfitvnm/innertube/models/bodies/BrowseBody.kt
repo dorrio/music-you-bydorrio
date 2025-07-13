@@ -1,7 +1,7 @@
-package es-remix.innertube.models.bodies
+package es.remix.innertube.models.bodies
 
-import es-remix.innertube.models.Context
-import es-remix.innertube.models.YouTubeClient
+import es.remix.innertube.models.Context
+import es.remix.innertube.models.YouTubeClient
 import kotlinx.serialization.Serializable
 
 @Serializable

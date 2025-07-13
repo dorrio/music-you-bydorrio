@@ -48,8 +48,8 @@ import androidx.media3.common.PlaybackException
 import androidx.media3.common.Player
 import androidx.media3.common.util.UnstableApi
 import coil3.compose.AsyncImage
-import es-remix.innertube.Innertube
-import es-remix.innertube.requests.visitorData
+import es.remix.innertube.Innertube
+import es.remix.innertube.requests.visitorData
 import es.remix.vimusic.Database
 import es.remix.vimusic.LocalPlayerServiceBinder
 import es.remix.vimusic.service.LoginRequiredException

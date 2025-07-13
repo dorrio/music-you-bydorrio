@@ -1,4 +1,4 @@
-package es-remix.kugou.models
+package es.remix.models
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable

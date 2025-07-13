@@ -1,14 +1,14 @@
-package es-remix.innertube.requests
+package es.remix.innertube.requests
 
 import io.ktor.client.call.body
 import io.ktor.client.request.post
 import io.ktor.client.request.setBody
-import es-remix.innertube.Innertube
-import es-remix.innertube.models.BrowseResponse
-import es-remix.innertube.models.NextResponse
-import es-remix.innertube.models.bodies.BrowseBody
-import es-remix.innertube.models.bodies.NextBody
-import es-remix.innertube.utils.runCatchingNonCancellable
+import es.remix.innertube.Innertube
+import es.remix.innertube.models.BrowseResponse
+import es.remix.innertube.models.NextResponse
+import es.remix.innertube.models.bodies.BrowseBody
+import es.remix.innertube.models.bodies.NextBody
+import es.remix.innertube.utils.runCatchingNonCancellable
 
 suspend fun Innertube.lyrics(videoId: String): Result<String?>? = runCatchingNonCancellable {
     val nextResponse = client.post(NEXT) {

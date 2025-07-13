@@ -22,10 +22,10 @@ import androidx.compose.runtime.snapshotFlow
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.lifecycle.viewmodel.compose.viewModel
-import es-remix.innertube.Innertube
-import es-remix.innertube.requests.itemsPage
-import es-remix.innertube.requests.itemsPageContinuation
-import es-remix.innertube.utils.from
+import es.remix.innertube.Innertube
+import es.remix.innertube.requests.itemsPage
+import es.remix.innertube.requests.itemsPageContinuation
+import es.remix.innertube.utils.from
 import es.remix.vimusic.Database
 import es.remix.vimusic.LocalPlayerServiceBinder
 import es.remix.vimusic.R

@@ -1,4 +1,4 @@
-package es-remix.innertube.models
+package es.remix.innertube.models
 
 class YouTubeClient(
     val clientName: String,
